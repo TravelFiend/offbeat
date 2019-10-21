@@ -1,5 +1,5 @@
 
-Chealse
+Chelsea
 -Aspiring singer
 -Looking for something to keep her in time
 -Allows her to play keyboard lines behind her to stay in tune
