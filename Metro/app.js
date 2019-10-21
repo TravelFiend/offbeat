@@ -1,6 +1,5 @@
 import { clock } from '../Utils/clock.js';
 
-
 const start = document.getElementById('start');
 start.addEventListener('click', () => {
     const runningClock = clock(120);
@@ -10,5 +9,3 @@ start.addEventListener('click', () => {
         clearTimeout(runningClock);
     });
 });
-
-
