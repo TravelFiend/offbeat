@@ -1,14 +1,14 @@
+export const clock = (bpm) => {
+    const runningClock = setInterval(() => {
+        
+        console.log('play sound');
+        //fire sound trigger
+        console.log('update graphic');
+        //update graphics
 
+    }, bpmToMs(bpm));
+};
 
-setInterval(() => {
-
-    console.log('hi');
-    //fire sound trigger
-
-    //update graphics
-
-}, bpmToMs(120)); //userNumber gets set in app.js, change to a var later.
-
-export function bpmToMs(bpm) {
+export const bpmToMs = (bpm) => {
     return 60000 / bpm;
 };
