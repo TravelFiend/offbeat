@@ -7,7 +7,7 @@ const test = QUnit.test;
 test('function will trigger sound', function(assert) {
     //Arrange
     // Set up your parameters and expectations
-    const thing = event.target.value;
+    const thingValue = event.target.value;
     const audioFileToPlay = '../../assets/middle-C-clarinet.wav';
     //Act 
     // Call the function you're testing and set the result to a const
