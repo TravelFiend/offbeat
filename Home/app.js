@@ -6,7 +6,6 @@ const userData = document.getElementById('user-form');
 userData.addEventListener('submit', function(event){
     event.preventDefault();
     const formData = new FormData(userData);
-    console.log(formData);
     const user = createUser(formData);
     storeUser(user);
     window.location = '../Metro';
