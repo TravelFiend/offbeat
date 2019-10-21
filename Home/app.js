@@ -1,13 +1,13 @@
-export const storeUser = (user) => {
-    const jsonUser = JSON.stringify(user);
-    localStorage.set('user', jsonUser);
-};
+import { storeUser } from '../Common/storeUser.js';
+import createUser from './createUser.js';
 
-export const getUser = () => {
-    const jsonUser = localStorage.getItem('user');
-    if (!jsonUser){
-        return null;
-    }
-    const user = JSON.parse(jsonUser);
-    return user;
-};
+const userData = document.getElementById('user-form');
+
+userData.addEventListener('submit', function(event){
+    event.preventDefault();
+    const formData = new FormData(userData);
+    console.log(formData);
+    const user = createUser(formData);
+    storeUser(user);
+    // window.location = '../Metro';
+});
