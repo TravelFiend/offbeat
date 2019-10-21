@@ -1,6 +1,5 @@
 html{
     height: 100%;
-    width: 0 auto;
 }
 
 body{
@@ -8,6 +7,12 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+main{
+    margin: 50px;
+    width: 960px;
+    height: 700px;
 }
 
 #user-form{
@@ -18,8 +23,29 @@ body{
 
 input{
     margin-bottom: 10px;
+    width: 150px;
+    border: 1px solid black;
+    border-radius: 2px;
 }
 
 label{
+    font-size: 11px;
+}
+
+button{
+    background-color: black;
+    color: white;
+    outline: none;
+    margin: 10px;
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 2px;
+}
+
+a{
+    color: darkgray;
+    text-decoration: none;
+    border-top: 2px solid darkgray;
+    padding: 5px;
     font-size: 11px;
 }
