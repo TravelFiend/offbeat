@@ -1,7 +1,7 @@
 
 const soundBoard = [{
     name : 'C',
-    value: '../' //path to assets and respective sound (piano to start?)
+    value: '../assets/middle-C-clarinet.wav' //path to assets and respective sound (piano to start?)
 },
 {
     name: 'C-Sharp',
