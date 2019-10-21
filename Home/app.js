@@ -9,5 +9,5 @@ userData.addEventListener('submit', function(event){
     console.log(formData);
     const user = createUser(formData);
     storeUser(user);
-    // window.location = '../Metro';
+    window.location = '../Metro';
 });
