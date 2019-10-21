@@ -5,8 +5,9 @@ export const clock = (bpm) => {
         //fire sound trigger
         console.log('update graphic');
         //update graphics
-
+        return runningClock;
     }, bpmToMs(bpm));
+    return runningClock;
 };
 
 export const bpmToMs = (bpm) => {
