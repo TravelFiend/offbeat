@@ -1,4 +1,7 @@
 import { clock } from '../Utils/clock.js';
+import { createHeader } from '../Common/create-header.js';
+
+createHeader();
 
 const start = document.getElementById('start');
 start.addEventListener('click', () => {
@@ -9,3 +12,4 @@ start.addEventListener('click', () => {
         clearTimeout(runningClock);
     });
 });
+
