@@ -1,12 +1,14 @@
+
+
 setInterval(() => {
+
     console.log('hi');
     //fire sound trigger
 
     //update graphics
 
-}, 1000);
+}, bpmToMs(120)); //userNumber gets set in app.js, change to a var later.
 
-export const bpmToMs = (bpm) => {
-    const bps = bpm / 60; 
-    return bps * 1000;
+export function bpmToMs(bpm) {
+    return 60000 / bpm;
 };
