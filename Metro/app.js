@@ -7,6 +7,11 @@ import { generateMetroSoundList } from '../Utils/generateMetroSoundList.js';
 import { mapSound } from './mapsound.js';
 import { soundBoards } from './data/soundboards.js';
 import { SoundBoard } from '../utils/make-sound-board.js'; //class
+// import { addOptions } from '../Home/createUser.js';
+import { saveSettings } from '../Common/storeUser.js';
+import { loadUser } from '../Common/load-user.js';
+
+const saveSound = document.getElementById('save-sound');
 
 let soundBoard = new SoundBoard(soundBoards[0]);
 for (let i = 0; i < soundBoard.length; i++){
@@ -36,6 +41,13 @@ start.addEventListener('click', () => {
         clearTimeout(runningClock);
         resetMetState();
     });
+});
+
+saveSound.addEventListener('click', () => {
+    let userNow = loadUser();
+    console.log(userNow);
+    
+    saveSettings(userNow);
 });
 
 let note;
