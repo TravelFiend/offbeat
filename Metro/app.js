@@ -2,6 +2,8 @@ import { clock } from '../Utils/clock.js';
 import { createHeader } from '../Common/create-header.js';
 import { resetMetState } from '../Metro/color-change.js';
 import { loadTheme } from '../Common/load-theme.js';
+import { metroSounds } from '../assets/metro-sounds/metroSounds.js';
+import { generateMetroSoundList } from '../Utils/generateMetroSoundList.js';
 
 let BPMElement;
 
@@ -11,9 +13,9 @@ let runningClock;
 
 createHeader();
 loadTheme();
+let metroSound = document.getElementById('metronome-sound');
 
-let metroSound = document.getElementById('metronome-sound').value;
-
+metroSound.appendChild(generateMetroSoundList(metroSounds));
 
 const start = document.getElementById('start');
 start.addEventListener('click', () => {
