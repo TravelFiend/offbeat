@@ -1,9 +1,10 @@
+import { changeMetColor } from '../Metro/color-change.js';
+
 export const clock = (bpm, soundPath) => {
     const clickSound = new Audio(soundPath);
     const runningClock = setInterval(() => {
         clickSound.play();
-        console.log('update graphic');
-        //update graphics
+        changeMetColor();
         return runningClock;
     }, bpmToMs(bpm));
     return runningClock;
