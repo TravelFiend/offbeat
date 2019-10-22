@@ -6,12 +6,13 @@ let BPMElement;
 
 let BPM; 
 
+let runningClock;
+
 createHeader();
 loadTheme();
 
 let metroSound = document.getElementById('metronome-sound').value;
 
-let runningClock;
 
 const start = document.getElementById('start');
 start.addEventListener('click', () => {
@@ -21,6 +22,6 @@ start.addEventListener('click', () => {
 
     const stop = document.getElementById('stop');
     stop.addEventListener('click', () => {
-        clearTimeout(runningClock);
+        clearInterval(runningClock);
     });
 });
