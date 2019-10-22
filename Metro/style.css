@@ -24,3 +24,26 @@ h1{
     text-align: center;
     margin-top: 0;
 }
+.metronome {
+    border: solid 2px gray;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    border-radius: 100%;
+    background-color: black;
+    list-style: none;
+}
+
+#metronome-display {
+    display: flex;
+}
+
+#metronome-display img {
+    width: 100px;
+    height: 100px;
+}
+
+#met-1 {
+    transform: scale(1.1);
+    margin-right: 8px
+}
