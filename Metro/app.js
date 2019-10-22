@@ -1,5 +1,6 @@
 import { clock } from '../Utils/clock.js';
 import { createHeader } from '../Common/create-header.js';
+import { resetMetState } from '../Metro/color-change.js';
 
 createHeader();
 
@@ -10,6 +11,7 @@ start.addEventListener('click', () => {
     const stop = document.getElementById('stop');
     stop.addEventListener('click', () => {
         clearTimeout(runningClock);
+        resetMetState();
     });
 });
 
