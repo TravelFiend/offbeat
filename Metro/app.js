@@ -11,7 +11,7 @@ let soundBoard = new SoundBoard(soundBoards[0]);
 
 for (let i = 0; i < soundBoard.length; i++){
     if (!soundBoards[0][i].value){
-        soundBoards[0][i] === soundBoards[0][0];
+        soundBoards[0][i] = soundBoards[0][0];
     }
 }
 
