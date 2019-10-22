@@ -1,4 +1,4 @@
-export class soundBoard {
+export class SoundBoard {
     constructor(soundBoard) {
         this.soundBoard = soundBoard.slice();
     }
