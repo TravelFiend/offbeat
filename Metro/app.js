@@ -5,7 +5,6 @@ let BPMElement;
 
 let BPM; 
 
-debugger
 createHeader();
 
 let runningClock;
@@ -15,7 +14,6 @@ start.addEventListener('click', () => {
     BPMElement = document.getElementById('bpm');
     BPM = parseInt(BPMElement.value);
     runningClock = clock(BPM);
-    debugger
     
     const stop = document.getElementById('stop');
     stop.addEventListener('click', () => {
