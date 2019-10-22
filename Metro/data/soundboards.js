@@ -2,63 +2,63 @@
 const soundBoards = [
     [{
         name : 'c',
-        value: '../assets/middle-C-clarinet.wav', //path to assets and respective sound (piano to start?)
-        noteNumber: 1,
+        path: '../assets/middle-C-clarinet.wav', //path to assets and respective sound (piano to start?)
+        noteNumber: 0,
     },
     {
         name: 'c-sharp',
-        value: '../',
-        noteNumber: 1.5,
+        path: '../',
+        noteNumber: 1,
     },
     {
         name: 'd',
-        value: '../',
+        path: '../',
         noteNumber: 2,
     },
     {
         name: 'd-sharp',
-        value: '../',
-        noteNumber: 2.5,
-    },
-    {
-        name: 'e',
-        value: '../',
+        path: '../',
         noteNumber: 3,
     },
     {
-        name: 'f',
-        value: '../',
+        name: 'e',
+        path: '../',
         noteNumber: 4,
     },
     {
-        name: 'f-sharp',
-        value: '../',
-        noteNumber: 4.5,
-    },
-    {
-        name: 'g',
-        value: '../',
+        name: 'f',
+        path: '../',
         noteNumber: 5,
     },
     {
-        name: 'g-sharp',
-        value: '../',
-        noteNumber: 5.5,
-    },
-    {
-        name: 'a',
-        value: '../',
+        name: 'f-sharp',
+        path: '../',
         noteNumber: 6,
     },
     {
+        name: 'g',
+        path: '../',
+        noteNumber: 7,
+    },
+    {
+        name: 'g-sharp',
+        path: '../',
+        noteNumber: 8,
+    },
+    {
+        name: 'a',
+        path: '../',
+        noteNumber: 9,
+    },
+    {
         name: 'a-sharp',
-        value: '../',
-        noteNumber: 6.5,
+        path: '../',
+        noteNumber: 10,
     },
     {
         name: 'b',
-        value: '../',
-        noteNumber: 7,
+        path: '../',
+        noteNumber: 11,
     }]
 ];
 export { soundBoards };
