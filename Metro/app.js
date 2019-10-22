@@ -13,14 +13,16 @@ let runningClock;
 
 createHeader();
 loadTheme();
-let metroSound = document.getElementById('metronome-sound');
+const metroSoundForm = document.getElementById('metronome-sound');
+metroSoundForm.appendChild(generateMetroSoundList(metroSounds));
 
-metroSound.appendChild(generateMetroSoundList(metroSounds));
 
 const start = document.getElementById('start');
 start.addEventListener('click', () => {
     BPMElement = document.getElementById('bpm');
     BPM = parseInt(BPMElement.value);
+    
+    let metroSound = document.getElementById('metronome-sound-menu').value;
     runningClock = clock(BPM, metroSound);
 
     const stop = document.getElementById('stop');
