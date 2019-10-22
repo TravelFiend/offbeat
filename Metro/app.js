@@ -16,13 +16,16 @@ let metroSound = document.getElementById('metronome-sound').value;
 
 
 const start = document.getElementById('start');
+
 start.addEventListener('click', () => {
+    start.disabled = true;
     BPMElement = document.getElementById('bpm');
     BPM = parseInt(BPMElement.value);
     runningClock = clock(BPM, metroSound);
 
     const stop = document.getElementById('stop');
     stop.addEventListener('click', () => {
+        start.disabled = false;
         clearTimeout(runningClock);
         resetMetState();
     });
