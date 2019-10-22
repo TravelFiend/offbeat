@@ -141,3 +141,7 @@ footer {
 footer form, footer button {
     margin: 10px;
 }
+
+#soundbank-legend {
+    border: solid 1px white;
+}
