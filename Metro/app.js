@@ -2,6 +2,12 @@ import { clock } from '../Utils/clock.js';
 import { createHeader } from '../Common/create-header.js';
 import { resetMetState } from '../Metro/color-change.js';
 import { loadTheme } from '../Common/load-theme.js';
+import { mapSound } from './mapsound.js';
+import { soundBoards } from './data/soundboards.js';
+
+let note;
+
+let soundBoard = soundBoards[0];
 
 let BPMElement;
 
@@ -27,3 +33,5 @@ start.addEventListener('click', () => {
         resetMetState();
     });
 });
+
+mapSound(soundBoard, note);
