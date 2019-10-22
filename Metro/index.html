@@ -21,20 +21,25 @@
     </div>
 
     <article id="main">
-        <label name="BPM">BPM</label>
-        <input type="number" id ="bpm" value = "60">
-        
-        <ul>
-            <li><button id ="start">Start</button></li>
-            <li><button id ="stop">Stop</button></li>
-        </ul>
+        <div id="metro-full">
+            <div id="metro">
+            <label id="bpm-text" for="BPM">BPM</label>
+            <input type="number" name="BPM" id="bpm" value="60">
+            
+            <ul id="start-stop">
+                <li><button id="start">&#10148;</button></li>
+                <li><button id="stop">&#10066;</button></li>
+            </ul>
+            </div>
 
-        <ul id="metronome-display">
-            <li class="metronome" id="met-1"></li>
-            <li class="metronome" id="met-2"></li>
-            <li class="metronome" id="met-3"></li>
-            <li class="metronome" id="met-4"></li>
-        </ul>
+            <ul id="metronome-display">
+                <li class="metronome" id="met-1"></li>
+                <li class="metronome" id="met-2"></li>
+                <li class="metronome" id="met-3"></li>
+                <li class="metronome" id="met-4"></li>
+            </ul>
+            <div id="metro-hide"></div>
+        </div>
 
         <section class="keyboard">
 
@@ -59,17 +64,20 @@
 
         </section>
 
-        <form>
-            <select name="soundbank" id="select-soundbank">
-                <option value = "./data/soundboard.js">SoundBoard</option>
-            </select>
-        </form>
+        <footer>
+            <form>Keyboard Sounds 
+                <select name="soundbank" id="select-soundbank">
+                    <option value = "./data/soundboard.js">SoundBoard</option>
+                </select>
+            </form>
 
-        <form>Metronome Sound
-            <select name="metronome-sound" id="metronome-sound">metronome-sound
-                <option value="../assets/rimshotshort.wav">rimshot</option>
-            </select>
-        </form>
+            <form>Metronome Sound
+                <select name="metronome-sound" id="metronome-sound">metronome-sound
+                    <option value="../assets/rimshotshort.wav">rimshot</option>
+                </select>
+            </form>
+            <button>Save</button>
+        </footer>
     </article>
     <script type="module" src="./app.js"></script>
 </body>
