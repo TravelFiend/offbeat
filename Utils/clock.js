@@ -1,6 +1,5 @@
-export const clock = (bpm) => {
-    const clickSound = new Audio('../assets/rimshotshort.wav');
-
+export const clock = (bpm, soundPath) => {
+    const clickSound = new Audio(soundPath);
     const runningClock = setInterval(() => {
         clickSound.play();
         console.log('update graphic');
