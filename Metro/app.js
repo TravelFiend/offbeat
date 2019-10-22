@@ -17,8 +17,8 @@ const start = document.getElementById('start');
 start.addEventListener('click', () => {
     BPMElement = document.getElementById('bpm');
     BPM = parseInt(BPMElement.value);
-    runningClock = clock(BPM);
-    
+    runningClock = clock(BPM, metroSound);
+
     const stop = document.getElementById('stop');
     stop.addEventListener('click', () => {
         clearTimeout(runningClock);
