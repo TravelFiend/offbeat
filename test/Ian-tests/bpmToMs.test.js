@@ -1,4 +1,4 @@
-import { bpmToMs } from '../Utils/clock.js'; 
+import { bpmToMs } from '../../Utils/clock.js'; 
 
 // IMPORT MODULES under test here:
 // import example from '../src/example.js';
