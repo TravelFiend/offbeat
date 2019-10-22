@@ -6,7 +6,6 @@ import { mapSound } from './mapsound.js';
 import { soundBoards } from './data/soundboards.js';
 import { SoundBoard } from '../utils/make-sound-board.js'; //class
 
-let note;
 let soundBoard = new SoundBoard(soundBoards[0]);
 
 for (let i = 0; i < soundBoard.length; i++){
@@ -32,7 +31,7 @@ start.addEventListener('click', () => {
     BPMElement = document.getElementById('bpm');
     BPM = parseInt(BPMElement.value);
     runningClock = clock(BPM, metroSound);
-
+    
     const stop = document.getElementById('stop');
     stop.addEventListener('click', () => {
         clearTimeout(runningClock);
@@ -40,4 +39,5 @@ start.addEventListener('click', () => {
     });
 });
 
+let note;
 mapSound(soundBoard, note);
