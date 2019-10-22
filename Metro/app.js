@@ -7,6 +7,7 @@ import { generateMetroSoundList } from '../Utils/generateMetroSoundList.js';
 import { mapSound } from './mapsound.js';
 import { soundBoards } from './data/soundboards.js';
 import { SoundBoard } from '../utils/make-sound-board.js'; //class
+import { changeTheme } from '../Common/change-theme.js';
 
 let soundBoard = new SoundBoard(soundBoards[0]);
 for (let i = 0; i < soundBoard.length; i++){
@@ -14,9 +15,12 @@ for (let i = 0; i < soundBoard.length; i++){
         soundBoards[0][i] = soundBoards[0][0];
     }
 }
+const selectMenu = document.getElementById('color-scheme');
 
 createHeader();
 loadTheme();
+
+selectMenu.addEventListener('input', changeTheme);
 
 const metroSoundForm = document.getElementById('metronome-sound');
 metroSoundForm.appendChild(generateMetroSoundList(metroSounds));
