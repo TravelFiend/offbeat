@@ -1,11 +1,15 @@
 import { clock } from '../Utils/clock.js';
 import { createHeader } from '../Common/create-header.js';
+import { loadTheme } from '../Common/load-theme.js';
 
 let BPMElement;
 
 let BPM; 
 
 createHeader();
+loadTheme();
+
+let metroSound = document.getElementById('metronome-sound').value;
 
 let runningClock;
 
@@ -20,5 +24,3 @@ start.addEventListener('click', () => {
         clearTimeout(runningClock);
     });
 });
-
-
