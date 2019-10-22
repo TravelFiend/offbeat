@@ -18,3 +18,4 @@ export const loadTheme = () => {
         body.classList.remove('monochrome');
     }
 };
+
