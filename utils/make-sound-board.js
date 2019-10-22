@@ -3,7 +3,7 @@ export class SoundBoard {
         this.soundBoard = soundBoard.slice();
     }
     adjustValue(newValue){
-        for (let i = 0; i < soundBoard.length; i++){
+        for (let i = 0; i < this.soundBoard.length; i++){
             this.soundBoard[i].value = newValue;
         }   
     }
