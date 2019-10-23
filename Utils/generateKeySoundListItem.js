@@ -1,9 +1,9 @@
-export const generateKeySoundListItem = (soundArray) => {
+export const generateKeySoundListItem = (soundArray, item) => {
     soundArray.forEach(soundObj => {
-        const item = document.createElement('option');
-        item.textContent = soundObj.name;
-        item.value = soundObj.path;
+        item = document.createElement('option');
+        item.textContent = soundObj.title;
+        item.value = soundObj.title;
         const keyList = document.getElementById('select-soundbank');
-        keyList.appendChild(item);
+        keyList.appendChild(item);   
     });
 };
