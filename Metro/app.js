@@ -48,7 +48,6 @@ start.addEventListener('click', () => {
 
 saveSound.addEventListener('click', () => {
     let userNow = loadUser();
-    console.log(userNow);
     
     saveSettings(userNow);
 });
