@@ -1,9 +1,9 @@
 import { storeUser } from '../Common/storeUser.js';
 import createUser from './createUser.js';
+import { changeTheme } from '../Common/change-theme.js'
 
 const userData = document.getElementById('user-form');
 const selectMenu = document.getElementById('color-scheme');
-const body = document.querySelector('body');
 
 userData.addEventListener('submit', function(event){
     event.preventDefault();
@@ -13,18 +13,4 @@ userData.addEventListener('submit', function(event){
     window.location = '../Metro';
 });
 
-selectMenu.addEventListener('input', (event) => {
-    if (event.target.value === 'monochrome') {
-        body.classList.add('monochrome');
-        body.classList.remove('halloween');
-        body.classList.remove('neon');
-    } else if (event.target.value === 'halloween') {
-        body.classList.add('halloween');
-        body.classList.remove('monochrome');
-        body.classList.remove('neon');
-    } else if (event.target.value === 'neon') {
-        body.classList.add('neon');
-        body.classList.remove('halloween');
-        body.classList.remove('monochrome');
-    }
-});
+selectMenu.addEventListener('input', changeTheme);

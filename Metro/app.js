@@ -6,6 +6,7 @@ import { metroSounds } from '../assets/metro-sounds/metroSounds.js';
 import { generateMetroSoundList } from '../Utils/generateMetroSoundList.js';
 import { mapSound } from './mapsound.js';
 import { soundBoards } from './data/soundboards.js';
+import { changeTheme } from '../Common/change-theme.js';
 //import { SoundBoard } from '../utils/make-sound-board.js'; //class
 import { whiteKeysColorChange, blackKeysColorChange } from './color-change.js';
 
@@ -17,11 +18,14 @@ for (let i = 0; i < Object.keys(soundBoard).length; i++){
         soundBoard[i] = soundBoard[0];
     }
 }
+const selectMenu = document.getElementById('color-scheme');
 
 createHeader();
 loadTheme();
 whiteKeysColorChange();
 blackKeysColorChange();
+
+selectMenu.addEventListener('input', changeTheme);
 
 const metroSoundForm = document.getElementById('metronome-sound');
 metroSoundForm.appendChild(generateMetroSoundList(metroSounds));
