@@ -7,8 +7,3 @@ for (let i = 0; i < Object.keys(masterSoundList).length; i++) {
     let soundOption = document.createElement('option');
     soundOption.textContent = masterSoundList[i].id;
 };
-                soundOption.addEventListener('submit', () => {
-
-
-
-

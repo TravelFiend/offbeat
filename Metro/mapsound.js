@@ -4,7 +4,7 @@ export const mapSound = (soundBoard, note) => {
         let poop = soundBoard[i];
         let name = poop.name;
         note = document.getElementById(name);
-        note.value = poop.path; 
+        //note.value = poop.path; 
         note.addEventListener('click', triggerSound(poop.path));
         // note.addEventLister('dblclick'
     }
