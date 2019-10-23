@@ -14,6 +14,8 @@ import { changeTheme } from '../Common/change-theme.js';
 //import { SoundBoard } from '../utils/make-sound-board.js'; //class
 import { whiteKeysColorChange, blackKeysColorChange } from './color-change.js';
 
+let theme = loadUser().theme;
+
 const saveSound = document.getElementById('save-sound');
 //let soundBoard = new SoundBoard(soundBoards[0]);
 let soundBoard = soundBoards[0];
@@ -27,8 +29,8 @@ const selectMenu = document.getElementById('color-scheme');
 
 createHeader();
 loadTheme();
-whiteKeysColorChange();
-blackKeysColorChange();
+whiteKeysColorChange(theme);
+blackKeysColorChange(theme);
 
 selectMenu.addEventListener('input', changeTheme);
 
