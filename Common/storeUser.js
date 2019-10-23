@@ -7,8 +7,10 @@ export const storeUser = (user) => {
 
 export const saveSettings = (user) => {
     const metroSound = document.querySelector('#metronome-sound-menu');
-    // const metroSound = document.querySelector('#keyboard-sound-menu');
+    const keySound = document.querySelector('#keyboard-sound-menu');
     user.metroSoundIndex = metroSound.selectedIndex;
+    user.keySoundIndex = keySound.selectedIndex;
     const stringedUser = JSON.stringify(user);
+
     localStorage.setItem('user', stringedUser);
 };
