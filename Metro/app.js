@@ -13,6 +13,7 @@ import { loadUser } from '../Common/load-user.js';
 import { changeTheme } from '../Common/change-theme.js';
 //import { SoundBoard } from '../utils/make-sound-board.js'; //class
 import { whiteKeysColorChange, blackKeysColorChange } from './color-change.js';
+import { generateKeySoundListItem } from '../utils/generateKeySoundListItem.js';
 
 let theme = loadUser().theme;
 
@@ -30,6 +31,7 @@ createHeader();
 loadTheme();
 whiteKeysColorChange(theme);
 blackKeysColorChange(theme);
+generateKeySoundListItem(soundBoards);
 
 let user = loadUser();
 
@@ -38,6 +40,7 @@ selectMenu.addEventListener('input', changeTheme);
 
 const metroSoundForm = document.getElementById('metronome-sound');
 metroSoundForm.appendChild(generateMetroSoundList(metroSounds));
+
 
 const start = document.getElementById('start');
 start.addEventListener('click', () => {
