@@ -10,8 +10,23 @@ export const colorObject = {
         background: '#131d3f',
     },
     monochrome: {
-        main: '#4ab4ff',
-        secondary: '#005fa2',
-        background: '#75e2c5',
+        main: '#445bc1',
+        secondary: '#bbdffa',
+        background: '#000a4e',
+    },
+    fall: {
+        main: '#a95423',
+        secondary: '#fff92dc7',
+        background: '#500000',
+    },
+    jones: {
+        main: '#f61fcc',
+        secondary: '#fdb9ee',
+        background: '#191346',
+    },
+    twinpeaks: {
+        main: '#c40501',
+        secondary: 'black',
+        background: 'black',
     }
 };
