@@ -132,16 +132,20 @@ a {
     text-decoration: none;
 }
 
-footer {
+.user-settings {
     display: flex;
     align-items: center;
     flex-direction: column
 }
 
-footer form, footer button {
+.user-settings form, .user-settings button {
     margin: 10px;
 }
 
 #soundbank-legend {
+    padding: 10px;
     border: solid 1px white;
+    position: absolute;
+    top: 35%;
+    left: 5%;
 }

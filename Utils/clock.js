@@ -4,6 +4,7 @@ export const clock = (bpm, soundPath, downBeatPath, beats) => {
     let count = 0;
     const clickSound = new Audio(soundPath);
     const downBeat = new Audio(downBeatPath);
+
     const runningClock = setInterval(() => {
         count++;
         if (count === 1){
@@ -17,6 +18,7 @@ export const clock = (bpm, soundPath, downBeatPath, beats) => {
         }
         return runningClock;
     }, bpmToMs(bpm));
+
     return runningClock;
 };
 

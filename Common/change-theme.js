@@ -1,17 +1,22 @@
+import { colorObject } from '../Metro/data/color-api.js';
+import { whiteKeysColorChange, blackKeysColorChange } from '../Metro/color-change.js';
+import { saveSettings } from './storeUser.js';
+import { loadUser } from '../Common/load-user.js';
+
 const body = document.querySelector('body');
 
 export function changeTheme() {
-    if (event.target.value === 'monochrome') {
-        body.classList.add('monochrome');
-        body.classList.remove('halloween');
-        body.classList.remove('neon');
-    } else if (event.target.value === 'halloween') {
-        body.classList.add('halloween');
-        body.classList.remove('monochrome');
-        body.classList.remove('neon');
-    } else if (event.target.value === 'neon') {
-        body.classList.add('neon');
-        body.classList.remove('halloween');
-        body.classList.remove('monochrome');
-    }
+    let userNow = loadUser();
+    saveSettings(userNow);
+    let theme = event.target.value;
+    let mainColor = colorObject[theme].main;
+    //let secondaryColor = colorObject[theme].secondary;
+    let backColor = colorObject[theme].background;
+
+    body.style.backgroundColor = backColor;
+    body.style.color = mainColor;
+
+    whiteKeysColorChange(theme);
+    blackKeysColorChange(theme);
+
 }
