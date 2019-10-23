@@ -44,22 +44,22 @@
         <section class="keyboard">
 
             <ul class="notes">
-                <li id="c-sharp">C#</li>
-                <li id="d-sharp">D#</li>
-                <li id="empty">empty</li>
-                <li id="f-sharp">F#</li>
-                <li id="g-sharp">G#</li>
-                <li id="a-sharp">A#</li>
+                <li class="black-keys" id="c-sharp">C#</li>
+                <li class="black-keys" id="d-sharp">D#</li>
+                <li class="black-keys" id="empty">empty</li>
+                <li class="black-keys" id="f-sharp">F#</li>
+                <li class="black-keys" id="g-sharp">G#</li>
+                <li class="black-keys" id="a-sharp">A#</li>
             </ul>
 
             <ul class="notes">
-                <li id="c">C</li>
-                <li id="d">D</li>
-                <li id="e">E</li>
-                <li id="f">F</li>
-                <li id="g">G</li>
-                <li id="a">A</li>
-                <li id="b">B</li>
+                <li class="white-keys" id="c">C</li>
+                <li class="white-keys" id="d">D</li>
+                <li class="white-keys" id="e">E</li>
+                <li class="white-keys" id="f">F</li>
+                <li class="white-keys" id="g">G</li>
+                <li class="white-keys" id="a">A</li>
+                <li class="white-keys" id="b">B</li>
             </ul>
 
         </section>
@@ -122,6 +122,13 @@
             <form>Keyboard Sounds 
                 <select name="soundbank" id="select-soundbank">
                     <option value = "./data/soundboard.js">SoundBoard</option>
+                </select>
+                
+                <label for="color-scheme">Color Scheme:</label>
+                <select id="color-scheme" name="color-scheme">
+                    <option value="monochrome">Monochrome</option>
+                    <option value="halloween">Halloween</option>
+                    <option value="neon">Neon</option>
                 </select>
             </form>
 
