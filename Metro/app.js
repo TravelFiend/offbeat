@@ -77,7 +77,6 @@ const metSelect = document.getElementById('metronome-sound-menu');
 const downSelect = document.getElementById('downbeat-sound-menu');
 
 if (user.keySoundIndex) sbSelect.selectedIndex = user.keySoundIndex;
-
 if (user.metroSoundIndex) metSelect.selectedIndex = user.metroSoundIndex;
 if (user.downBeatIndex) downSelect.selectedIndex = user.downBeatIndex;
 
