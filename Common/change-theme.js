@@ -1,5 +1,5 @@
 import { colorObject } from '../Metro/data/color-api.js';
-import { whiteKeysColorChange, blackKeysColorChange } from '../Metro/color-change.js'
+import { whiteKeysColorChange, blackKeysColorChange } from '../Metro/color-change.js';
 
 const body = document.querySelector('body');
 
@@ -11,7 +11,10 @@ export function changeTheme() {
 
     body.style.backgroundColor = backColor;
     body.style.color = mainColor;
-    whiteKeysColorChange(theme);
-    blackKeysColorChange(theme);
+
+    if (window.title === 'OFFBEAT - Product') {
+        whiteKeysColorChange(theme);
+        blackKeysColorChange(theme);
+    }
 
 }

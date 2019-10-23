@@ -43,9 +43,9 @@ export function whiteKeysColorChange(theme) {
 
 export function blackKeysColorChange(theme) {
     let secondaryColor = colorObject[theme].secondary;
-    const whiteKeys = document.querySelectorAll('li');
+    const blackKeys = document.querySelectorAll('li');
     for (let i = 6; i < 12; i++) {
-        whiteKeys[i].style.backgroundColor = 'black';
-        whiteKeys[i].style.color = secondaryColor;
+        blackKeys[i].style.backgroundColor = 'black';
+        blackKeys[i].style.color = secondaryColor;
     }
 }
