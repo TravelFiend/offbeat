@@ -22,7 +22,7 @@ const saveSound = document.getElementById('save-sound');
 const keyboardSoundSelect = document.getElementById('select-soundbank');
 //let soundBoard = new SoundBoard(soundBoards[0]);
 let soundBoard = soundBoards[0].sounds;
-
+let note;
 //MOVE ME TO MAPSOUNDS FUNCTION, SINCE WE WANT LEGEND TO UPDATE WHEN A NEW BANK IS SELECTED
 populateLegend(soundBoard);
 
@@ -30,18 +30,15 @@ createHeader();
 loadTheme();
 whiteKeysColorChange(theme);
 blackKeysColorChange(theme);
+mapSound(soundBoard, note);
 
 generateKeySoundListItem(soundBoards);
 
-let note;
-
 keyboardSoundSelect.addEventListener('input', (event) => {
-    // console.log(event.target.value);
     soundBoards.forEach(soundObj => {
+        // if (event.target.value !== event.target.value)
         if (event.target.value === soundObj.title){
-            // debugger
             mapSound(soundObj.sounds, note);
-            // debugger
         }
     });
 });
@@ -89,7 +86,3 @@ saveSound.addEventListener('click', () => {
     
     saveSettings(userNow);
 });
-
-// let note;
-
-// mapSound(soundBoard, note);
