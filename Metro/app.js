@@ -3,7 +3,7 @@ import { createHeader } from '../Common/create-header.js';
 import { resetMetState } from '../Metro/color-change.js';
 import { loadTheme } from '../Common/load-theme.js';
 import { metroSounds } from '../assets/metro-sounds/metroSounds.js';
-import { generateMetroSoundList } from '../Utils/generateMetroSoundList.js';
+import { generateMetroSoundList, generateDownBeat } from '../Utils/generateMetroSoundList.js';
 import { mapSound } from './mapsound.js';
 import { soundBoards } from './data/soundboards.js';
 // import { SoundBoard } from '../utils/make-sound-board.js'; //class
@@ -48,7 +48,9 @@ const selectMenu = document.getElementById('color-scheme');
 selectMenu.addEventListener('input', changeTheme);
 
 const metroSoundForm = document.getElementById('metronome-sound');
+const downBeatSoundForm = document.getElementById('downbeat-sound');
 metroSoundForm.appendChild(generateMetroSoundList(metroSounds));
+downBeatSoundForm.appendChild(generateDownBeat(metroSounds));
 
 
 const start = document.getElementById('start');
@@ -58,7 +60,8 @@ start.addEventListener('click', () => {
     let BPM = parseInt(BPMElement.value);
     
     let metroSound = document.getElementById('metronome-sound-menu').value;
-    let runningClock = clock(BPM, metroSound);
+    let downBeatSound = document.getElementById('downbeat-sound-menu').value;
+    let runningClock = clock(BPM, metroSound, downBeatSound);
 
     const stop = document.getElementById('stop');
     stop.addEventListener('click', () => {

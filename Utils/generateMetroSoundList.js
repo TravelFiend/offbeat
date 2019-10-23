@@ -18,3 +18,16 @@ export const generateMetroSoundList = (allSounds) => {
     });
     return menu;
 };
+
+export const generateDownBeat = (allSounds) => {
+    const menu = document.createElement('select');
+    menu.name = 'downbeat-sound';
+    menu.id = 'downbeat-sound-menu';
+    menu.textContent = 'downbeat-sound';
+
+    allSounds.forEach(obj => {
+        menu.append(generateMetroSoundListItem(obj));
+        
+    });
+    return menu;
+};
