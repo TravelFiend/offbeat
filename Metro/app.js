@@ -25,13 +25,15 @@ for (let i = 0; i < Object.keys(soundBoard).length; i++){
         soundBoard[i] = soundBoard[0];
     }
 }
-const selectMenu = document.getElementById('color-scheme');
 
 createHeader();
 loadTheme();
 whiteKeysColorChange(theme);
 blackKeysColorChange(theme);
 
+let user = loadUser();
+
+const selectMenu = document.getElementById('color-scheme');
 selectMenu.addEventListener('input', changeTheme);
 
 const metroSoundForm = document.getElementById('metronome-sound');
@@ -53,6 +55,12 @@ start.addEventListener('click', () => {
         resetMetState();
     });
 });
+
+const sbSelect = document.getElementById('select-soundbank');
+const metSelect = document.getElementById('metronome-sound-menu');
+
+if (user.keySoundIndex) sbSelect.selectedIndex = user.keySoundIndex;
+if (user.metroSoundIndex) metSelect.selectedIndex = user.metroSoundIndex;
 
 saveSound.addEventListener('click', () => {
     let userNow = loadUser();
