@@ -9,13 +9,15 @@ let metPosition = 0;
 let currentBeat = document.getElementById('met-4');
 const metCircles = document.getElementsByClassName('metronome');
 
-export function changeMetColor() {
+export function changeMetColor(beats) {
     currentBeat.style.backgroundColor = 'black';
     metPosition++;
     currentBeat = document.getElementById('met-' + metPosition);
     currentBeat.style.backgroundColor = mainColor;
+    console.log('met pos: ' + metPosition + ' beats: ' + beats);
 
-    if (metPosition === 4) {
+    if (metPosition === beats) {
+        console.log('got here');
         metPosition = 0;
     }
 }

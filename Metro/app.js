@@ -32,6 +32,7 @@ blackKeysColorChange();
 
 selectMenu.addEventListener('input', changeTheme);
 
+
 const metroSoundForm = document.getElementById('metronome-sound');
 const downBeatSoundForm = document.getElementById('downbeat-sound');
 metroSoundForm.appendChild(generateMetroSoundList(metroSounds));
@@ -43,9 +44,11 @@ start.addEventListener('click', () => {
     let BPMElement = document.getElementById('bpm');
     let BPM = parseInt(BPMElement.value);
     
+    let beats = Number(document.getElementById('time-sig').value);
     let metroSound = document.getElementById('metronome-sound-menu').value;
     let downBeatSound = document.getElementById('downbeat-sound-menu').value;
-    let runningClock = clock(BPM, metroSound, downBeatSound);
+    console.log(beats);
+    let runningClock = clock(BPM, metroSound, downBeatSound, beats);
 
     const stop = document.getElementById('stop');
     stop.addEventListener('click', () => {
