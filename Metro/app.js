@@ -21,20 +21,7 @@ const saveSound = document.getElementById('save-sound');
 //let soundBoard = new SoundBoard(soundBoards[0]);
 let soundBoard = soundBoards[0];
 
-<<<<<<< HEAD
-// for (let i = 0; i < Object.keys(soundBoard).length; i++){
-//     if (!soundBoard[i].path){
-//         soundBoard[i] = soundBoard[0];
-//     }
-// }
-const selectMenu = document.getElementById('color-scheme');
-=======
-for (let i = 0; i < Object.keys(soundBoard).length; i++){
-    if (!soundBoard[i].path){
-        soundBoard[i] = soundBoard[0];
-    }
-}
->>>>>>> 98f265c0d60af570e23d7251df36ae495072a3bf
+
 
 createHeader();
 loadTheme();
