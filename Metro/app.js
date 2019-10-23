@@ -6,13 +6,15 @@ import { metroSounds } from '../assets/metro-sounds/metroSounds.js';
 import { generateMetroSoundList } from '../Utils/generateMetroSoundList.js';
 import { mapSound } from './mapsound.js';
 import { soundBoards } from './data/soundboards.js';
-import { SoundBoard } from '../utils/make-sound-board.js'; //class
+//import { SoundBoard } from '../utils/make-sound-board.js'; //class
 import { whiteKeysColorChange, blackKeysColorChange } from './color-change.js';
 
-let soundBoard = new SoundBoard(soundBoards[0]);
-for (let i = 0; i < soundBoard.length; i++){
-    if (!soundBoards[0][i].value){
-        soundBoards[0][i] = soundBoards[0][0];
+//let soundBoard = new SoundBoard(soundBoards[0]);
+let soundBoard = soundBoards[0];
+
+for (let i = 0; i < Object.keys(soundBoard).length; i++){
+    if (!soundBoard[i].path){
+        soundBoard[i] = soundBoard[0];
     }
 }
 
