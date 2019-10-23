@@ -2,6 +2,8 @@ import { colorObject } from './data/color-api.js';
 import { loadUser } from '../Common/load-user.js';
 
 let theme = loadUser().theme;
+let mainColor = colorObject[theme].main;
+let secondaryColor = colorObject[theme].secondary;
 
 let metPosition = 0;
 let currentBeat = document.getElementById('met-4');
