@@ -6,10 +6,15 @@ import { metroSounds } from '../assets/metro-sounds/metroSounds.js';
 import { generateMetroSoundList } from '../Utils/generateMetroSoundList.js';
 import { mapSound } from './mapsound.js';
 import { soundBoards } from './data/soundboards.js';
+// import { SoundBoard } from '../utils/make-sound-board.js'; //class
+// import { addOptions } from '../Home/createUser.js';
+import { saveSettings } from '../Common/storeUser.js';
+import { loadUser } from '../Common/load-user.js';
 import { changeTheme } from '../Common/change-theme.js';
 //import { SoundBoard } from '../utils/make-sound-board.js'; //class
 import { whiteKeysColorChange, blackKeysColorChange } from './color-change.js';
 
+const saveSound = document.getElementById('save-sound');
 //let soundBoard = new SoundBoard(soundBoards[0]);
 let soundBoard = soundBoards[0];
 
@@ -45,6 +50,12 @@ start.addEventListener('click', () => {
         clearTimeout(runningClock);
         resetMetState();
     });
+});
+
+saveSound.addEventListener('click', () => {
+    let userNow = loadUser();
+    
+    saveSettings(userNow);
 });
 
 let note;
