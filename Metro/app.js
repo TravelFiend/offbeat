@@ -60,9 +60,11 @@ start.addEventListener('click', () => {
 
 const sbSelect = document.getElementById('select-soundbank');
 const metSelect = document.getElementById('metronome-sound-menu');
+const downSelect = document.getElementById('downbeat-sound-menu');
 
 if (user.keySoundIndex) sbSelect.selectedIndex = user.keySoundIndex;
 if (user.metroSoundIndex) metSelect.selectedIndex = user.metroSoundIndex;
+if (user.downBeatIndex) downSelect.selectedIndex = user.downBeatIndex;
 
 saveSound.addEventListener('click', () => {
     let userNow = loadUser();
