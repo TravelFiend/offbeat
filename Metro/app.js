@@ -19,6 +19,7 @@ import { populateLegend } from '../utils/populate-sound-bank.js';
 let theme = loadUser().theme;
 
 const saveSound = document.getElementById('save-sound');
+const keyboardSoundSelect = document.getElementById('select-soundbank');
 //let soundBoard = new SoundBoard(soundBoards[0]);
 let soundBoard = soundBoards[0].sounds;
 
@@ -29,7 +30,21 @@ createHeader();
 loadTheme();
 whiteKeysColorChange(theme);
 blackKeysColorChange(theme);
+
 generateKeySoundListItem(soundBoards);
+
+let note;
+
+keyboardSoundSelect.addEventListener('input', (event) => {
+    // console.log(event.target.value);
+    soundBoards.forEach(soundObj => {
+        if (event.target.value === soundObj.title){
+            // debugger
+            mapSound(soundObj.sounds, note);
+            // debugger
+        }
+    });
+});
 
 let user = loadUser();
 
