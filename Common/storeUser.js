@@ -6,8 +6,8 @@ export const storeUser = (user) => {
 };
 
 export const saveSettings = (user) => {
-    const metroSound = document.querySelector('#metronome-sound-menu');
-    const keySound = document.querySelector('#keyboard-sound-menu');
+    const metroSound = document.getElementById('metronome-sound-menu');
+    const keySound = document.querySelector('#select-soundbank');
     user.metroSoundIndex = metroSound.selectedIndex;
     user.keySoundIndex = keySound.selectedIndex;
     const stringedUser = JSON.stringify(user);
