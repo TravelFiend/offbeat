@@ -20,16 +20,10 @@ let theme = loadUser().theme;
 
 const saveSound = document.getElementById('save-sound');
 //let soundBoard = new SoundBoard(soundBoards[0]);
-<<<<<<< HEAD
 let soundBoard = soundBoards[1];
 
 //MOVE ME TO MAPSOUNDS FUNCTION, SINCE WE WANT LEGEND TO UPDATE WHEN A NEW BANK IS SELECTED
 populateLegend(soundBoard);
-=======
-let soundBoard = soundBoards[0];
-
-console.log(document.title)
->>>>>>> b2e98c058487e0b98ea33554709afce73b7631d9
 
 createHeader();
 loadTheme();
