@@ -21,7 +21,7 @@ const saveSound = document.getElementById('save-sound');
 //let soundBoard = new SoundBoard(soundBoards[0]);
 let soundBoard = soundBoards[0];
 
-
+console.log(document.title)
 
 createHeader();
 loadTheme();
