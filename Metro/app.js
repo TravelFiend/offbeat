@@ -14,6 +14,8 @@ import { changeTheme } from '../Common/change-theme.js';
 //import { SoundBoard } from '../utils/make-sound-board.js'; //class
 import { whiteKeysColorChange, blackKeysColorChange } from './color-change.js';
 
+let theme = loadUser().theme;
+
 const saveSound = document.getElementById('save-sound');
 //let soundBoard = new SoundBoard(soundBoards[0]);
 let soundBoard = soundBoards[0];
@@ -26,8 +28,8 @@ for (let i = 0; i < Object.keys(soundBoard).length; i++){
 
 createHeader();
 loadTheme();
-whiteKeysColorChange();
-blackKeysColorChange();
+whiteKeysColorChange(theme);
+blackKeysColorChange(theme);
 
 let user = loadUser();
 
