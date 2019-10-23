@@ -14,14 +14,16 @@ import { changeTheme } from '../Common/change-theme.js';
 //import { SoundBoard } from '../utils/make-sound-board.js'; //class
 import { whiteKeysColorChange, blackKeysColorChange } from './color-change.js';
 import { generateKeySoundListItem } from '../utils/generateKeySoundListItem.js';
+import { populateLegend } from '../utils/populate-sound-bank.js';
 
 let theme = loadUser().theme;
 
 const saveSound = document.getElementById('save-sound');
 //let soundBoard = new SoundBoard(soundBoards[0]);
-let soundBoard = soundBoards[0];
+let soundBoard = soundBoards[1];
 
-
+//MOVE ME TO MAPSOUNDS FUNCTION, SINCE WE WANT LEGEND TO UPDATE WHEN A NEW BANK IS SELECTED
+populateLegend(soundBoard);
 
 createHeader();
 loadTheme();
@@ -59,9 +61,10 @@ start.addEventListener('click', () => {
 });
 
 const sbSelect = document.getElementById('select-soundbank');
-const metSelect = document.getElementById('metronome-sound-menu');
-
 if (user.keySoundIndex) sbSelect.selectedIndex = user.keySoundIndex;
+console.log(sbSelect);
+
+const metSelect = document.getElementById('metronome-sound-menu');
 if (user.metroSoundIndex) metSelect.selectedIndex = user.metroSoundIndex;
 
 saveSound.addEventListener('click', () => {
@@ -69,7 +72,7 @@ saveSound.addEventListener('click', () => {
     
     saveSettings(userNow);
 });
- 
+
 let note;
 
 mapSound(soundBoard, note);
