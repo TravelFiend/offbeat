@@ -9,7 +9,7 @@ let metPosition = 0;
 let currentBeat = document.getElementById('met-4');
 const metCircles = document.getElementsByClassName('metronome');
 
-export function changeMetColor() {
+export function changeMetColor(beats) {
     theme = loadUser().theme;
     mainColor = colorObject[theme].main;
     secondaryColor = colorObject[theme].secondary;
@@ -20,7 +20,7 @@ export function changeMetColor() {
     currentBeat.style.backgroundColor = mainColor;
     currentBeat.style.boxShadow = '0px 0px 30px ' + secondaryColor;
 
-    if (metPosition === 4) {
+    if (metPosition === beats) {
         metPosition = 0;
     }
 }
