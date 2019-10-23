@@ -13,29 +13,32 @@ import { loadUser } from '../Common/load-user.js';
 import { changeTheme } from '../Common/change-theme.js';
 //import { SoundBoard } from '../utils/make-sound-board.js'; //class
 import { whiteKeysColorChange, blackKeysColorChange } from './color-change.js';
+import { generateKeySoundListItem } from '../utils/generateKeySoundListItem.js';
+
+let theme = loadUser().theme;
 
 const saveSound = document.getElementById('save-sound');
 //let soundBoard = new SoundBoard(soundBoards[0]);
 let soundBoard = soundBoards[0];
 
-for (let i = 0; i < Object.keys(soundBoard).length; i++){
-    if (!soundBoard[i].path){
-        soundBoard[i] = soundBoard[0];
-    }
-}
-const selectMenu = document.getElementById('color-scheme');
+
 
 createHeader();
 loadTheme();
-whiteKeysColorChange();
-blackKeysColorChange();
+whiteKeysColorChange(theme);
+blackKeysColorChange(theme);
+generateKeySoundListItem(soundBoards);
 
+let user = loadUser();
+
+const selectMenu = document.getElementById('color-scheme');
 selectMenu.addEventListener('input', changeTheme);
 
 const metroSoundForm = document.getElementById('metronome-sound');
 const downBeatSoundForm = document.getElementById('downbeat-sound');
 metroSoundForm.appendChild(generateMetroSoundList(metroSounds));
 downBeatSoundForm.appendChild(generateDownBeat(metroSounds));
+
 
 const start = document.getElementById('start');
 start.addEventListener('click', () => {
@@ -55,11 +58,20 @@ start.addEventListener('click', () => {
     });
 });
 
+const sbSelect = document.getElementById('select-soundbank');
+const metSelect = document.getElementById('metronome-sound-menu');
+const downSelect = document.getElementById('downbeat-sound-menu');
+
+if (user.keySoundIndex) sbSelect.selectedIndex = user.keySoundIndex;
+if (user.metroSoundIndex) metSelect.selectedIndex = user.metroSoundIndex;
+if (user.downBeatIndex) downSelect.selectedIndex = user.downBeatIndex;
+
 saveSound.addEventListener('click', () => {
     let userNow = loadUser();
     
     saveSettings(userNow);
 });
-
+ 
 let note;
+
 mapSound(soundBoard, note);

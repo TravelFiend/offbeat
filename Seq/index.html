@@ -9,6 +9,15 @@
 </head>
 <body>
     
-    <script src="./app.js/"></script>
+    <label for="amp">Amp</label>
+    <input type="range" name="amp" id="ampGain" min=0 max=1 step=.1>
+
+    <label for="osc1Freq">Osc1 Freq</label>
+    <input type="range" name="osc1Freq" id="osc1Freq" min=30 max=2000 step=1>
+
+    <label for="sampleTigger">Trigger Sample</label>
+    <button id = "sampleTrigger">Trigger</button>
+
+    <script type="module" src="./app.js"></script>
 </body>
 </html>
