@@ -7,57 +7,57 @@ const soundBoards = [
     },
     {
         name: 'c-sharp',
-        path: '../',
+        path: '../assets/middle-C-clarinet.wav',
         noteNumber: 1,
     },
     {
         name: 'd',
-        path: '../',
+        path: '../assets/middle-C-clarinet.wav',
         noteNumber: 2,
     },
     {
         name: 'd-sharp',
-        path: '../',
+        path: '../assets/middle-C-clarinet.wav',
         noteNumber: 3,
     },
     {
         name: 'e',
-        path: '../',
+        path: '../assets/middle-C-clarinet.wav',
         noteNumber: 4,
     },
     {
         name: 'f',
-        path: '../',
+        path: '../assets/middle-C-clarinet.wav',
         noteNumber: 5,
     },
     {
         name: 'f-sharp',
-        path: '../',
+        path: '../assets/middle-C-clarinet.wav',
         noteNumber: 6,
     },
     {
         name: 'g',
-        path: '../',
+        path: '../assets/middle-C-clarinet.wav',
         noteNumber: 7,
     },
     {
         name: 'g-sharp',
-        path: '../',
+        path: '../assets/middle-C-clarinet.wav',
         noteNumber: 8,
     },
     {
         name: 'a',
-        path: '../',
+        path: '../assets/middle-C-clarinet.wav',
         noteNumber: 9,
     },
     {
         name: 'a-sharp',
-        path: '../',
+        path: '../assets/middle-C-clarinet.wav',
         noteNumber: 10,
     },
     {
         name: 'b',
-        path: '../',
+        path: '../assets/middle-C-clarinet.wav',
         noteNumber: 11,
     }]
 ];
