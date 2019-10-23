@@ -21,11 +21,7 @@ const saveSound = document.getElementById('save-sound');
 //let soundBoard = new SoundBoard(soundBoards[0]);
 let soundBoard = soundBoards[0];
 
-for (let i = 0; i < Object.keys(soundBoard).length; i++){
-    if (!soundBoard[i].path){
-        soundBoard[i] = soundBoard[0];
-    }
-}
+
 
 createHeader();
 loadTheme();
@@ -73,6 +69,7 @@ saveSound.addEventListener('click', () => {
     
     saveSettings(userNow);
 });
-
+ 
 let note;
+
 mapSound(soundBoard, note);
