@@ -88,10 +88,12 @@ saveSound.addEventListener('click', () => {
 
 function recordEvent() {
     if (record === true){
+        console.log(record);
         mapSound(soundBoard, note, record);
         //change icon back
         record = false;
     } else if (record === false) {
+        console.log(record);
         record = true;
         //change icon
         //add event listens to each key

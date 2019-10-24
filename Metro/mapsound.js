@@ -22,8 +22,12 @@ export const mapSound = (soundBoard, note, record) => {
             
         });
     }
+
     populateLegend(soundBoard);
+
     console.log('at the bottom of mapSound: ' + currentRecording);
     user.currentProject = currentRecording;
+    user.projects.push(currentRecording);
     storeUser(user);
+    currentRecording = [];
 };
