@@ -4,7 +4,7 @@ import { resetMetState } from '../Metro/color-change.js';
 import { loadTheme } from '../Common/load-theme.js';
 import { metroSounds } from '../assets/metro-sounds/metroSounds.js';
 import { generateMetroSoundList, generateDownBeat } from '../Utils/generateMetroSoundList.js';
-import { mapSound, recordEvent } from './mapsound.js';
+import { mapSound } from './mapsound.js';
 import { soundBoards } from './data/soundboards.js';
 import { saveSettings, storeUser } from '../Common/storeUser.js';
 import { loadUser } from '../Common/load-user.js';
@@ -15,6 +15,8 @@ import { masterSoundList } from '../assets/master-list-of-sounds/masterSoundList
 
 let theme = loadUser().theme;
 
+let currentRecording = [];
+
 const saveSound = document.getElementById('save-sound');
 const keyboardSoundSelect = document.getElementById('select-soundbank');
 let soundBoard = soundBoards[0].sounds;
@@ -22,7 +24,11 @@ let note;
 let record = false;
 
 const recordButton = document.getElementById('record');
-recordButton.addEventListener('click', recordEvent);
+recordButton.addEventListener('click', recordEventTakeTwo);
+
+const saveRecordingButton = document.getElementById('save-record');
+saveRecordingButton.addEventListener('click', saveRecording);
+
 
 createHeader();
 loadTheme();
@@ -85,3 +91,36 @@ saveSound.addEventListener('click', () => {
     
     saveSettings(userNow);
 });
+
+// function recordEvent() {
+//     if (record === true){
+//         console.log(record);
+//         mapSound(soundBoard, note, record);
+//         //change icon back
+//         record = false;
+//     } else if (record === false) {
+//         console.log(record);
+//         record = true;
+//         //change icon
+//         //add event listens to each key
+//         //when a key is pressed add that key's name to currentproject array
+//     }
+// }
+
+function recordEventTakeTwo() {
+    currentRecording = [];
+    let keys = document.querySelectorAll('li');
+    for (let i = 6; i < 19; i++) {
+        keys[i].addEventListener('click', recordNote);
+    }
+}
+
+function recordNote() {
+    let id = event.target.id;
+    currentRecording.push(id);
+}
+
+function saveRecording() {
+    user.projects.push(currentRecording);
+    storeUser(user);
+}
