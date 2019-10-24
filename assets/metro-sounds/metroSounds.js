@@ -8,5 +8,9 @@ export const metroSounds = [
     }, {
         name: '659hz',
         path: '../assets/metro-sounds/659hz 50ms.mp3'
+    },
+    {
+        name: 'Throw in The Towel',
+        path: '../assets/ludacris/Get Up Get Out.7.wav'
     }
 ];
