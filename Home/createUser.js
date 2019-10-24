@@ -4,10 +4,7 @@ const createUser = (formData) => {
         theme: formData.get('color-scheme'),
         projectName: formData.get('project'),
         projects: [],
-        currentProject: {
-            name: '',
-            recording: [],
-        } 
+        currentProject: []
     };
     return user;
 };

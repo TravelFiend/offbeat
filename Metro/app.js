@@ -88,16 +88,11 @@ saveSound.addEventListener('click', () => {
 
 function recordEvent() {
     if (record === true){
-        let currentRecording = mapSound(soundBoard, note, record);
+        mapSound(soundBoard, note, record);
         //change icon back
-        console.log(currentRecording);
-        user.projects.push(currentRecording);
-        console.log('after: ' + JSON.stringify(user.projects));
-        storeUser(user);
         record = false;
     } else if (record === false) {
         record = true;
-        console.log()
         //change icon
         //add event listens to each key
         //when a key is pressed add that key's name to currentproject array

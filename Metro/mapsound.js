@@ -1,6 +1,7 @@
 import { triggerSound } from '../Common/trigger-sound.js';
 import { populateLegend } from '../utils/populate-sound-bank.js';
 import { loadUser } from '../Common/load-user.js';
+import { storeUser } from '../Common/storeUser.js';
 let currentRecording = [];
 
 export const mapSound = (soundBoard, note, record) => {
@@ -23,5 +24,6 @@ export const mapSound = (soundBoard, note, record) => {
     }
     populateLegend(soundBoard);
     console.log('at the bottom of mapSound: ' + currentRecording);
-    return currentRecording;
+    user.currentProject = currentRecording;
+    storeUser(user);
 };
