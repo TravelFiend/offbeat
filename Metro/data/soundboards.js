@@ -390,6 +390,70 @@ const wiz = {
         noteNumber: 11
     }]
 };
+const cMinor = {
+    title : 'C-',
+    sounds :  [{
+        name: 'c',
+        id: 'C',
+        path: '../../assets/clavChords/70s Funk ClavC.wav',
+        noteNumber: 0
+    }, {
+        name: 'c-sharp',
+        id: 'C#',
+        path: '../../assets/clavChords/70s Funk ClavDflat.wav',
+        noteNumber: 1
+    }, {
+        name: 'd',
+        id: 'D',
+        path: '../../assets/clavChords/70s Funk ClavD.wav',
+        noteNumber: 2
+    }, {
+        name: 'd-sharp',
+        id: 'D#',
+        path: '../../assets/clavChords/70s Funk ClavEflat.wav',
+        noteNumber: 3
+    }, {
+        name: 'e',
+        id: 'E',
+        path: '../../assets/clavChords/70s Funk ClavE.wav',
+        noteNumber: 4
+    }, {
+        name: 'f',
+        id: 'F',
+        path: '../../assets/clavChords/70s Funk ClavF.wav',
+        noteNumber: 5
+    }, {
+        name: 'f-sharp',
+        id: 'F#',
+        path: '../../assets/clavChords/70s Funk ClavFsharp.wav',
+        noteNumber: 6
+    }, {
+        name: 'g',
+        id: 'G',
+        path: '../../assets/clavChords/70s Funk ClavG.wav',
+        noteNumber: 7
+    }, {
+        name: 'g-sharp',
+        id: 'G#',
+        path: '../../assets/clavChords/70s Funk ClavAflat.wav',
+        noteNumber: 8
+    }, {
+        name: 'a',
+        id: 'A',
+        path: '../../assets/clavChords/70s Funk ClavA.wav',
+        noteNumber: 9
+    }, {
+        name: 'a-sharp',
+        id: 'A#',
+        path: '../../assets/clavChords/70s Funk ClavBflat.wav',
+        noteNumber: 10
+    }, {
+        name: 'b',
+        id: 'A#',
+        path: '../../assets/clavChords/70s Funk ClavB.wav',
+        noteNumber: 11
+    }]
+};
 
-const soundBoards = [board1, synthBank, mikeBank, tones, luda, wiz];
+const soundBoards = [board1, synthBank, mikeBank, tones, luda, wiz, cMinor];
 export { soundBoards };
