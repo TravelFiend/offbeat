@@ -211,8 +211,8 @@ const tones = {
         path: '../../assets/metro-sounds/classicElectricPiano/Classic Electric Pianocsharp.wav',
         noteNumber: 1
     }, {
-        name: 'D',
-        id: 'Dial-up',
+        name: 'd',
+        id: 'D',
         path: '../../assets/metro-sounds/classicElectricPiano/Classic Electric Pianodpitch.wav',
         noteNumber: 2
     }, {
@@ -262,6 +262,70 @@ const tones = {
         noteNumber: 11
     }]
 };
+const luda = {
+    title : 'Luda',
+    sounds :  [{
+        name: 'c',
+        id: 'C',
+        path: '../../assets/ludacris/Area Codes.7.wav',
+        noteNumber: 0
+    }, {
+        name: 'c-sharp',
+        id: 'C#',
+        path: '../../assets/ludacris/Get Up Get Out.7.wav',
+        noteNumber: 1
+    }, {
+        name: 'd',
+        id: 'D',
+        path: '../../assets/ludacris/Get Up Get Out.11.wav',
+        noteNumber: 2
+    }, {
+        name: 'd-sharp',
+        id: 'D#',
+        path: '../../assets/ludacris/Blueberry Yum Yum Lyrics.3.wav',
+        noteNumber: 3
+    }, {
+        name: 'e',
+        id: 'E',
+        path: '../../assets/ludacris/Blueberry Yum Yum Lyrics.7.wav',
+        noteNumber: 4
+    }, {
+        name: 'f',
+        id: 'F',
+        path: '../../assets/ludacris/Blueberry Yum Yum Lyrics.11.wav',
+        noteNumber: 5
+    }, {
+        name: 'f-sharp',
+        id: 'F#',
+        path: '../../assets/ludacris/Blueberry Yum Yum Lyrics.15.wav',
+        noteNumber: 6
+    }, {
+        name: 'g',
+        id: 'G',
+        path: '../../assets/ludacris/Blueberry Yum Yum Lyrics.19.wav',
+        noteNumber: 7
+    }, {
+        name: 'g-sharp',
+        id: 'G#',
+        path: '../../assets/ludacris/What Them Girls Like (Album Version (Edited)).3.wav',
+        noteNumber: 8
+    }, {
+        name: 'a',
+        id: 'A',
+        path: '../../assets/ludacris/What Them Girls Like (Album Version (Edited)).19.wav',
+        noteNumber: 9
+    }, {
+        name: 'a-sharp',
+        id: 'A#',
+        path: '../../assets/ludacris/What Them Girls Like (Album Version (Edited)).21.wav',
+        noteNumber: 10
+    }, {
+        name: 'b',
+        id: 'A#',
+        path: '../../assets/ludacris/Yeah! Usher featuring Lil Jon and Ludacris.3.wav',
+        noteNumber: 11
+    }]
+};
 
-const soundBoards = [board1, synthBank, mikeBank, tones];
+const soundBoards = [board1, synthBank, mikeBank, tones, luda];
 export { soundBoards };
