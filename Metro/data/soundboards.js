@@ -198,6 +198,70 @@ const mikeBank = {
         noteNumber: 11
     }]
 };
+const tones = {
+    title : 'Electronic Piano',
+    sounds :  [{
+        name: 'c',
+        id: 'C',
+        path: '../../assets/metro-sounds/classicElectricPiano/Classic Electric Pianocpitch.wav',
+        noteNumber: 0
+    }, {
+        name: 'c-sharp',
+        id: 'C#',
+        path: '../../assets/metro-sounds/classicElectricPiano/Classic Electric Pianocsharp.wav',
+        noteNumber: 1
+    }, {
+        name: 'D',
+        id: 'Dial-up',
+        path: '../../assets/metro-sounds/classicElectricPiano/Classic Electric Pianodpitch.wav',
+        noteNumber: 2
+    }, {
+        name: 'd-sharp',
+        id: 'D#',
+        path: '../../assets/metro-sounds/classicElectricPiano/Classic Electric Pianodsharp.wav',
+        noteNumber: 3
+    }, {
+        name: 'e',
+        id: 'E',
+        path: '../../assets/metro-sounds/classicElectricPiano/Classic Electric Pianoepitch.wav',
+        noteNumber: 4
+    }, {
+        name: 'f',
+        id: 'F',
+        path: '../../assets/metro-sounds/classicElectricPiano/Classic Electric Pianofpitch.wav',
+        noteNumber: 5
+    }, {
+        name: 'f-sharp',
+        id: 'F#',
+        path: '../../assets/metro-sounds/classicElectricPiano/Classic Electric Pianofsharp.wav',
+        noteNumber: 6
+    }, {
+        name: 'g',
+        id: 'G',
+        path: '../../assets/metro-sounds/classicElectricPiano/Classic Electric Pianogpitch.wav',
+        noteNumber: 7
+    }, {
+        name: 'g-sharp',
+        id: 'G#',
+        path: '../../assets/metro-sounds/classicElectricPiano/Classic Electric Pianogsharp.wav',
+        noteNumber: 8
+    }, {
+        name: 'a',
+        id: 'A',
+        path: '../../assets/metro-sounds/classicElectricPiano/Classic Electric Pianoapitch.wav',
+        noteNumber: 9
+    }, {
+        name: 'a-sharp',
+        id: 'A#',
+        path: '../../assets/metro-sounds/classicElectricPiano/Classic Electric Pianoasharp.wav',
+        noteNumber: 10
+    }, {
+        name: 'b',
+        id: 'A#',
+        path: '../../assets/metro-sounds/classicElectricPiano/Classic Electric Pianobpitch.wav',
+        noteNumber: 11
+    }]
+};
 
-const soundBoards = [board1, synthBank, mikeBank];
+const soundBoards = [board1, synthBank, mikeBank, tones];
 export { soundBoards };

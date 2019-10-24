@@ -6,35 +6,41 @@ import { metroSounds } from '../assets/metro-sounds/metroSounds.js';
 import { generateMetroSoundList, generateDownBeat } from '../Utils/generateMetroSoundList.js';
 import { mapSound } from './mapsound.js';
 import { soundBoards } from './data/soundboards.js';
-// import { SoundBoard } from '../utils/make-sound-board.js'; //class
-// import { addOptions } from '../Home/createUser.js';
 import { saveSettings } from '../Common/storeUser.js';
 import { loadUser } from '../Common/load-user.js';
 import { changeTheme } from '../Common/change-theme.js';
-//import { SoundBoard } from '../utils/make-sound-board.js'; //class
 import { whiteKeysColorChange, blackKeysColorChange } from './color-change.js';
 import { generateKeySoundListItem } from '../utils/generateKeySoundListItem.js';
-import { populateLegend } from '../utils/populate-sound-bank.js';
 
 let theme = loadUser().theme;
 
 const saveSound = document.getElementById('save-sound');
-//let soundBoard = new SoundBoard(soundBoards[0]);
-let soundBoard = soundBoards[1];
-
-//MOVE ME TO MAPSOUNDS FUNCTION, SINCE WE WANT LEGEND TO UPDATE WHEN A NEW BANK IS SELECTED
-populateLegend(soundBoard);
+const keyboardSoundSelect = document.getElementById('select-soundbank');
+let soundBoard = soundBoards[1].sounds;
+let note;
 
 createHeader();
 loadTheme();
 whiteKeysColorChange(theme);
 blackKeysColorChange(theme);
+mapSound(soundBoard, note);
+
 generateKeySoundListItem(soundBoards);
+
+keyboardSoundSelect.addEventListener('input', (event) => {
+    soundBoards.forEach(soundObj => {
+        // if (event.target.value !== event.target.value)
+        if (event.target.value === soundObj.title){
+            mapSound(soundObj.sounds, note);
+        }
+    });
+});
 
 let user = loadUser();
 
 const selectMenu = document.getElementById('color-scheme');
 selectMenu.addEventListener('input', changeTheme);
+
 
 const metroSoundForm = document.getElementById('metronome-sound');
 const downBeatSoundForm = document.getElementById('downbeat-sound');
@@ -48,9 +54,10 @@ start.addEventListener('click', () => {
     let BPMElement = document.getElementById('bpm');
     let BPM = parseInt(BPMElement.value);
     
+    let beats = Number(document.getElementById('time-sig').value);
     let metroSound = document.getElementById('metronome-sound-menu').value;
     let downBeatSound = document.getElementById('downbeat-sound-menu').value;
-    let runningClock = clock(BPM, metroSound, downBeatSound);
+    let runningClock = clock(BPM, metroSound, downBeatSound, beats);
 
     const stop = document.getElementById('stop');
     stop.addEventListener('click', () => {
@@ -73,7 +80,3 @@ saveSound.addEventListener('click', () => {
     
     saveSettings(userNow);
 });
-
-let note;
-
-mapSound(soundBoard, note);
