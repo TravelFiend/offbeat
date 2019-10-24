@@ -3,6 +3,7 @@ import { populateLegend } from '../utils/populate-sound-bank.js';
 import { loadUser } from '../Common/load-user.js';
 import { storeUser } from '../Common/storeUser.js';
 import { soundBoards } from './data/soundboards.js';
+import { SoundBoard } from '../utils/make-sound-board.js';
 let currentRecording = [];
 let record = false;
 let user = loadUser();
@@ -22,7 +23,6 @@ export const mapSound = (soundBoard, note, record) => {
             triggerSound(poop.path);
             if (record) {
                 currentRecording.push(poop.name);
-                console.log('recording: ' + currentRecording);
             }
             
         });
@@ -35,14 +35,13 @@ export const mapSound = (soundBoard, note, record) => {
 
 export function recordEvent() {
     if (record === true){
-        console.log(record);
         mapSound(soundBoard, note, record);
         //change icon back
         record = false;
     } else if (record === false) {
-        console.log(record);
         user.currentProject = currentRecording;
         user.projects.push(currentRecording);
+        mapSound(SoundBoard, note, record);
         storeUser(user);
         record = true;
         //change icon

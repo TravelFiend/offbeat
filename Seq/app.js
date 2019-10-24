@@ -1,32 +1,18 @@
-const AudioContext = window.AudioContext;
-const audioCtx = new AudioContext();
+let patternTable = document.querySelector('tbody');
 
-let osc1 = audioCtx.createOscillator();
-osc1.type = 'square';
-osc1.frequency.value = 680;
+const user = JSON.parse(localStorage.getItem('user'));
+let projectArray = user.projects;
 
-let amp = audioCtx.createGain();
-
-osc1.connect(amp).connect(audioCtx.destination);
-
-let osc1freq = document.getElementById('osc1Freq');
-osc1freq.addEventListener('input', () => {
-    osc1.frequency.value = osc1freq.value;
-});
-
-let ampRange = document.getElementById('ampGain');
-ampRange.addEventListener('input', () => {
-    amp.gain.value = ampRange.value;
-}, false);
-
-//const sampleSource = audioCtx.createBufferSource();
-//sampleSource.buffer =  FileReader() '../assets/middle-C-clarinet.wav';
-//console.log(sampleSource);  
-
-let sampleTrigger = document.getElementById('sampleTrigger');
-sampleTrigger.addEventListener('click', () => {
+projectArray.forEach(pattern => {
+    let currentPattern = renderPattern(pattern);
+    patternTable.appendChild(currentPattern);
 
 });
 
-
-osc1.start();
+const renderPattern = (pattern) => {
+    let row = document.createElement('tr');
+    let cellSound = document.createElement('td');
+    cellSound.textContent = pattern;
+    row.appendChild(cellSound);
+    return row;
+};
