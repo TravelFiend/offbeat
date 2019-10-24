@@ -211,7 +211,7 @@ const tones = {
         path: '../../assets/metro-sounds/classicElectricPiano/Classic Electric Pianocsharp.wav',
         noteNumber: 1
     }, {
-        name: 'D',
+        name: 'd',
         id: 'Dial-up',
         path: '../../assets/metro-sounds/classicElectricPiano/Classic Electric Pianodpitch.wav',
         noteNumber: 2
@@ -263,5 +263,70 @@ const tones = {
     }]
 };
 
-const soundBoards = [board1, synthBank, mikeBank, tones];
+const peeWee = {
+    title : 'Pee Wee',
+    sounds :  [{
+        name: 'c',
+        id: 'Aaahhhh',
+        path: '../../assets/joels-sounds/aahhhh.wav',
+        noteNumber: 0
+    }, {
+        name: 'c-sharp',
+        id: 'Big Butt',
+        path: '../../assets/joels-sounds/big_but.wav',
+        noteNumber: 1
+    }, {
+        name: 'd',
+        id: 'I Dont Know',
+        path: '../../assets/joels-sounds/dont_know.wav',
+        noteNumber: 2
+    }, {
+        name: 'd-sharp',
+        id: 'Ha ha heh heh',
+        path: '../../assets/joels-sounds/ha_ha_heh_heh.wav',
+        noteNumber: 3
+    }, {
+        name: 'e',
+        id: 'Huh huh',
+        path: '../../assets/joels-sounds/huh_huh.wav',
+        noteNumber: 4
+    }, {
+        name: 'f',
+        id: 'I know you are',
+        path: '../../assets/joels-sounds/know_you_are1.wav',
+        noteNumber: 5
+    }, {
+        name: 'f-sharp',
+        id: 'La la la',
+        path: '../../assets/joels-sounds/la_la_la.wav',
+        noteNumber: 6
+    }, {
+        name: 'g',
+        id: 'Rahhr',
+        path: '../../assets/joels-sounds/rahhr.wav',
+        noteNumber: 7
+    }, {
+        name: 'g-sharp',
+        id: 'Significance',
+        path: '../../assets/joels-sounds/significance.wav',
+        noteNumber: 8
+    }, {
+        name: 'a',
+        id: 'Sorry',
+        path: '../../assets/joels-sounds/sorry.wav',
+        noteNumber: 9
+    }, {
+        name: 'a-sharp',
+        id: 'Too late',
+        path: '../../assets/joels-sounds/too_late.wav',
+        noteNumber: 10
+    }, {
+        name: 'b',
+        id: 'Use the phone',
+        path: '../../assets/joels-sounds/use_the_phone.wav',
+        noteNumber: 11
+    }]
+};
+
+const soundBoards = [board1, synthBank, mikeBank, tones, peeWee];
 export { soundBoards };
