@@ -6,7 +6,7 @@ import { metroSounds } from '../assets/metro-sounds/metroSounds.js';
 import { generateMetroSoundList, generateDownBeat } from '../Utils/generateMetroSoundList.js';
 import { mapSound } from './mapsound.js';
 import { soundBoards } from './data/soundboards.js';
-import { saveSettings } from '../Common/storeUser.js';
+import { saveSettings, storeUser } from '../Common/storeUser.js';
 import { loadUser } from '../Common/load-user.js';
 import { changeTheme } from '../Common/change-theme.js';
 import { whiteKeysColorChange, blackKeysColorChange } from './color-change.js';
@@ -18,12 +18,17 @@ const saveSound = document.getElementById('save-sound');
 const keyboardSoundSelect = document.getElementById('select-soundbank');
 let soundBoard = soundBoards[1].sounds;
 let note;
+let record = false;
+
+const recordButton = document.getElementById('record');
+
+recordButton.addEventListener('click', recordEvent);
 
 createHeader();
 loadTheme();
 whiteKeysColorChange(theme);
 blackKeysColorChange(theme);
-mapSound(soundBoard, note);
+mapSound(soundBoard, note, record);
 
 generateKeySoundListItem(soundBoards);
 
@@ -31,7 +36,7 @@ keyboardSoundSelect.addEventListener('input', (event) => {
     soundBoards.forEach(soundObj => {
         // if (event.target.value !== event.target.value)
         if (event.target.value === soundObj.title){
-            mapSound(soundObj.sounds, note);
+            mapSound(soundObj.sounds, note, record);
         }
     });
 });
@@ -80,3 +85,21 @@ saveSound.addEventListener('click', () => {
     
     saveSettings(userNow);
 });
+
+function recordEvent() {
+    if (record === true){
+        let currentRecording = mapSound(soundBoard, note, record);
+        //change icon back
+        console.log(currentRecording);
+        user.projects.push(currentRecording);
+        console.log('after: ' + JSON.stringify(user.projects));
+        storeUser(user);
+        record = false;
+    } else if (record === false) {
+        record = true;
+        console.log()
+        //change icon
+        //add event listens to each key
+        //when a key is pressed add that key's name to currentproject array
+    }
+}
