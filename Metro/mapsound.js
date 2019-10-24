@@ -1,4 +1,5 @@
 import { triggerSound } from '../Common/trigger-sound.js';
+import { populateLegend } from '../utils/populate-sound-bank.js';
 
 export const mapSound = (soundBoard, note) => {
     for (let i = 0; i < soundBoard.length; i++){
@@ -9,6 +10,6 @@ export const mapSound = (soundBoard, note) => {
         note.replaceWith(clonedNote);
         const func = triggerSound(poop.path); //note.value = poop.path; 
         clonedNote.addEventListener('click', func);
-        // note.addEventLister('dblclick'
     }
+    populateLegend(soundBoard);
 };

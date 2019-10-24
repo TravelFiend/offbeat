@@ -6,25 +6,18 @@ import { metroSounds } from '../assets/metro-sounds/metroSounds.js';
 import { generateMetroSoundList, generateDownBeat } from '../Utils/generateMetroSoundList.js';
 import { mapSound } from './mapsound.js';
 import { soundBoards } from './data/soundboards.js';
-// import { SoundBoard } from '../utils/make-sound-board.js'; //class
-// import { addOptions } from '../Home/createUser.js';
 import { saveSettings } from '../Common/storeUser.js';
 import { loadUser } from '../Common/load-user.js';
 import { changeTheme } from '../Common/change-theme.js';
-//import { SoundBoard } from '../utils/make-sound-board.js'; //class
 import { whiteKeysColorChange, blackKeysColorChange } from './color-change.js';
 import { generateKeySoundListItem } from '../utils/generateKeySoundListItem.js';
-import { populateLegend } from '../utils/populate-sound-bank.js';
 
 let theme = loadUser().theme;
 
 const saveSound = document.getElementById('save-sound');
 const keyboardSoundSelect = document.getElementById('select-soundbank');
-//let soundBoard = new SoundBoard(soundBoards[0]);
-let soundBoard = soundBoards[0].sounds;
+let soundBoard = soundBoards[1].sounds;
 let note;
-//MOVE ME TO MAPSOUNDS FUNCTION, SINCE WE WANT LEGEND TO UPDATE WHEN A NEW BANK IS SELECTED
-populateLegend(soundBoard);
 
 createHeader();
 loadTheme();
