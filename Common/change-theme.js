@@ -10,7 +10,6 @@ export function changeTheme() {
     saveSettings(userNow);
     let theme = event.target.value;
     let mainColor = colorObject[theme].main;
-    //let secondaryColor = colorObject[theme].secondary;
     let backColor = colorObject[theme].background;
 
     body.style.backgroundColor = backColor;
