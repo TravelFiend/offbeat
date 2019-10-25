@@ -25,8 +25,8 @@ export const colorObject = {
         background: '#191346',
     },
     twinpeaks: {
-        main: '#c40501',
+        main: 'white',
         secondary: 'black',
-        background: 'black',
+        background: '#c40501',
     }
 };
