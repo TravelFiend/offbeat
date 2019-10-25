@@ -1,4 +1,4 @@
-import { clock } from '../Utils/clock.js';
+import { clock, playBack } from '../Utils/clock.js';
 import { createHeader } from '../Common/create-header.js';
 import { resetMetState } from '../Metro/color-change.js';
 import { loadTheme } from '../Common/load-theme.js';
@@ -6,18 +6,29 @@ import { metroSounds } from '../assets/metro-sounds/metroSounds.js';
 import { generateMetroSoundList, generateDownBeat } from '../Utils/generateMetroSoundList.js';
 import { mapSound } from './mapsound.js';
 import { soundBoards } from './data/soundboards.js';
-import { saveSettings } from '../Common/storeUser.js';
+import { saveSettings, storeUser } from '../Common/storeUser.js';
 import { loadUser } from '../Common/load-user.js';
 import { changeTheme } from '../Common/change-theme.js';
 import { whiteKeysColorChange, blackKeysColorChange } from './color-change.js';
 import { generateKeySoundListItem } from '../utils/generateKeySoundListItem.js';
 
-let theme = loadUser().theme;
+let user = loadUser();
+let theme = user.theme;
+
+let currentRecording = [];
+
+// const playBackItem = newFunk(sbSelect).currentProject;
 
 const saveSound = document.getElementById('save-sound');
 const keyboardSoundSelect = document.getElementById('select-soundbank');
-let soundBoard = soundBoards[1].sounds;
+let soundBoard = soundBoards[0].sounds;
 let note;
+
+const recordButton = document.getElementById('record');
+recordButton.addEventListener('click', recordEventTakeTwo);
+
+const saveRecordingButton = document.getElementById('save-record');
+saveRecordingButton.addEventListener('click', saveRecording);
 
 createHeader();
 loadTheme();
@@ -36,7 +47,6 @@ keyboardSoundSelect.addEventListener('input', (event) => {
     });
 });
 
-let user = loadUser();
 
 const selectMenu = document.getElementById('color-scheme');
 selectMenu.addEventListener('input', changeTheme);
@@ -79,4 +89,56 @@ saveSound.addEventListener('click', () => {
     let userNow = loadUser();
     
     saveSettings(userNow);
+});
+
+function recordEventTakeTwo() {
+    currentRecording = [];
+    //only initialize
+    let keys = document.querySelectorAll('li');
+    for (let i = 6; i < 19; i++) {
+        keys[i].addEventListener('click', recordNote);
+    }
+}
+
+function recordNote() {
+    let id = event.target.id;
+    console.log(sbSelect.value);
+    currentRecording.push(id);
+}
+
+function saveRecording() {
+    user.projects.push(currentRecording);
+    user.currentProject = currentRecording;
+    storeUser(user);
+}
+
+function findSb(sb, value) {
+    for (let i = 0; i < sb.length; i++) {
+        if (sb[i].title === value) return sb[i].sounds;
+    }
+}
+let sbValue = findSb(soundBoards, sbSelect.value);
+
+function newFunk(sbSelect, array) {
+    let soundPathArray = [];
+    for (let i = 0; i < array.length; i++) {
+        sbSelect.forEach(sound => {
+            if (sound.name === array[i]) {
+                soundPathArray.push(sound.path);
+                console.log(soundPathArray);
+            }
+            
+        });
+    }
+    return soundPathArray;
+}
+
+const pathArray = newFunk(sbValue, user.currentProject);
+console.log(newFunk(sbValue, user.currentProject));
+
+const playRecordingButton = document.getElementById('play-record');
+playRecordingButton.addEventListener('click', () => {
+    let BPMElement = document.getElementById('bpm');
+    let BPM = parseInt(BPMElement.value);
+    playBack(BPM, pathArray);
 });
