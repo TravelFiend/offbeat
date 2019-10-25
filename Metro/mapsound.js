@@ -1,5 +1,5 @@
 import { triggerSound } from '../Common/trigger-sound.js';
-import { populateLegend } from '../utils/populate-sound-bank.js';
+import { populateLegend } from '../Utils/populate-sound-bank.js';
 
 export const mapSound = (soundBoard, note) => {
     for (let i = 0; i < soundBoard.length; i++){
