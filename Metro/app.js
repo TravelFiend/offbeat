@@ -9,7 +9,7 @@ import { soundBoards } from './data/soundboards.js';
 import { saveSettings, storeUser } from '../Common/storeUser.js';
 import { loadUser } from '../Common/load-user.js';
 import { changeTheme } from '../Common/change-theme.js';
-import { whiteKeysColorChange, blackKeysColorChange } from './color-change.js';
+import { whiteKeysColorChange, blackKeysColorChange, toggleRecColor } from './color-change.js';
 import { generateKeySoundListItem } from '../utils/generateKeySoundListItem.js';
 import { hideUnusedMetro } from '../Metro/hideUnusedMetro.js';
 
@@ -98,7 +98,8 @@ saveSound.addEventListener('click', () => {
 
 function recordEventTakeTwo() {
     currentRecording = [];
-    //only initialize
+    toggleRecColor(recordButton, true);
+    recordButton.disabled = true;
     let keys = document.querySelectorAll('li');
     for (let i = 6; i < 19; i++) {
         keys[i].addEventListener('click', recordNote);
@@ -114,6 +115,8 @@ function saveRecording() {
     user.projects.push(currentRecording);
     user.currentProject = currentRecording;
     storeUser(user);
+    toggleRecColor(recordButton, false);
+    recordButton.disabled = false;
 }
 
 function findSb(sb) {
