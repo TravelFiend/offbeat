@@ -150,6 +150,33 @@ a {
     left: 5%;
 }
 
+button {
+    font-family: 'Big Shoulders Text';
+    font-size: 32px;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    border: solid 2px;
+}
+
+button:hover {
+    box-shadow: 0px 0px 10px white;
+    cursor: pointer;
+}
+
+.white-keys:hover, .black-keys:hover {
+    box-shadow: 0px 0px 10px white;
+    cursor: pointer;
+}
+
+#settings {
+    display: flex;
+    align-items: center
+}
+
+#time-sig {
+    margin-left: 5px
+}
 .hidden {
     display: none;
 };
