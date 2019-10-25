@@ -138,8 +138,15 @@ const pathArray = newFunk(sbValue, user.currentProject);
 console.log(newFunk(sbValue, user.currentProject));
 
 const playRecordingButton = document.getElementById('play-record');
+const stopPlaybackButton = document.getElementById('stop-record');
 playRecordingButton.addEventListener('click', () => {
     let BPMElement = document.getElementById('bpm');
     let BPM = parseInt(BPMElement.value);
-    playBack(BPM, pathArray);
+    let runningPlayback = playBack(BPM, pathArray);
+    playRecordingButton.disabled = true;
+
+    stopPlaybackButton.addEventListener('click', () => {
+        playRecordingButton.disabled = false;
+        clearTimeout(runningPlayback);
+    });
 });

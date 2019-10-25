@@ -29,10 +29,12 @@ export const bpmToMs = (bpm) => {
 };
 
 export const playBack = (bpm, arrayoOfPaths) => {
-    setInterval(() => {
+    const runningPlay = setInterval(() => {
         let nextSound = new Audio(arrayoOfPaths[i]);
         nextSound.play();
         i++;
         if (i === arrayoOfPaths.length) i = 0;
     }, bpmToMs(bpm));
+
+    return runningPlay;
 };
