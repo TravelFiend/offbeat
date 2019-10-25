@@ -11,6 +11,6 @@ export const metroSounds = [
     },
     {
         name: 'Throw in The Towel',
-        path: '../assets/ludacris/Get_Up_Get_Out7.wav'
+        path: '../assets/ludacris/Get_Up_Get_Out.7.wav'
     }
 ];

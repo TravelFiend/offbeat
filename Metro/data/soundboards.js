@@ -279,62 +279,62 @@ const luda = {
     sounds :  [{
         name: 'c',
         id: 'Horoscope',
-        path: '../assets/ludacris/Area_Codes7.wav',
+        path: '../assets/ludacris/Area_Codes.7.wav',
         noteNumber: 0
     }, {
         name: 'c-sharp',
         id: 'F*c* it',
-        path: '../assets/ludacris/Get_Up_Get_Out7.wav',
+        path: '../assets/ludacris/Get_Up_Get_Out.7.wav',
         noteNumber: 1
     }, {
         name: 'd',
         id: 'F*c* Up',
-        path: '../assets/ludacris/Get_Up_Get_Out11.wav',
+        path: '../assets/ludacris/Get_Up_Get_Out.11.wav',
         noteNumber: 2
     }, {
         name: 'd-sharp',
         id: 'OOOoooo',
-        path: '../assets/ludacris/Blueberry_Yum_Yum_Lyrics3.wav',
+        path: '../assets/ludacris/Blueberry_Yum_Yum_Lyrics.3.wav',
         noteNumber: 3
     }, {
         name: 'e',
         id: 'Break It Down',
-        path: '../assets/ludacris/Blueberry_Yum_Yum_Lyrics7.wav',
+        path: '../assets/ludacris/Blueberry_Yum_Yum_Lyrics.7.wav',
         noteNumber: 4
     }, {
         name: 'f',
         id: 'Stop Drop and',
-        path: '../assets/ludacris/Blueberry_Yum_Yum_Lyrics11.wav',
+        path: '../assets/ludacris/Blueberry_Yum_Yum_Lyrics.11.wav',
         noteNumber: 5
     }, {
         name: 'f-sharp',
         id: 'Stankin\' Lincoln',
-        path: '../assets/ludacris/Blueberry_Yum_Yum_Lyrics15.wav',
+        path: '../assets/ludacris/Blueberry_Yum_Yum_Lyrics.15.wav',
         noteNumber: 6
     }, {
         name: 'g',
         id: 'Eat Everything',
-        path: '../assets/ludacris/Blueberry_Yum_Yum_Lyrics19.wav',
+        path: '../assets/ludacris/Blueberry_Yum_Yum_Lyrics.19.wav',
         noteNumber: 7
     }, {
         name: 'g-sharp',
         id: 'Swag',
-        path: '../assets/ludacris/What_Them_Girls_Like_(Album Version_(Edited))3.wav',
+        path: '../assets/ludacris/What_Them_Girls_Like_(Album Version_(Edited)).3.wav',
         noteNumber: 8
     }, {
         name: 'a',
         id: 'Out The Kitchen',
-        path: '../assets/ludacris/What_Them_Girls_Like_(Album Version_(Edited))19.wav',
+        path: '../assets/ludacris/What_Them_Girls_Like_(Album Version_(Edited)).19.wav',
         noteNumber: 9
     }, {
         name: 'a-sharp',
         id: 'Send Em\'',
-        path: '../assets/ludacris/What_Them_Girls_Like_(Album Version_(Edited))21.wav',
+        path: '../assets/ludacris/What_Them_Girls_Like_(Album Version_(Edited)).21.wav',
         noteNumber: 10
     }, {
         name: 'b',
         id: 'Milk tha Cow',
-        path: '../assets/ludacris/Yeah!_Usher_featuring_Lil_Jon and_Ludacris3.wav',
+        path: '../assets/ludacris/Yeah!_Usher_featuring_Lil_Jon and_Ludacris.3.wav',
         noteNumber: 11
     }]
 };
@@ -343,62 +343,62 @@ const wiz = {
     sounds :  [{
         name: 'c',
         id: 'C',
-        path: '../assets/wiz-khalifa/Hustlin3.wav',
+        path: '../assets/wiz-khalifa/Hustlin.3.wav',
         noteNumber: 0
     }, {
         name: 'c-sharp',
         id: 'C#',
-        path: '../assets/wiz-khalifa/Hustlin11.wav',
+        path: '../assets/wiz-khalifa/Hustlin.11.wav',
         noteNumber: 1
     }, {
         name: 'd',
         id: 'D',
-        path: '../assets/wiz-khalifa/Hustlin15.wav',
+        path: '../assets/wiz-khalifa/Hustlin.15.wav',
         noteNumber: 2
     }, {
         name: 'd-sharp',
         id: 'D#',
-        path: '../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track)3.wav',
+        path: '../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track).3.wav',
         noteNumber: 3
     }, {
         name: 'e',
         id: 'E',
-        path: '../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track)7.wav',
+        path: '../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track).7.wav',
         noteNumber: 4
     }, {
         name: 'f',
         id: 'F',
-        path: '../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track)11.wav',
+        path: '../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track).11.wav',
         noteNumber: 5
     }, {
         name: 'f-sharp',
         id: 'F#',
-        path: '../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track)15.wav',
+        path: '../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track).15.wav',
         noteNumber: 6
     }, {
         name: 'g',
         id: 'G',
-        path: '../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track)19.wav',
+        path: '../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track).19.wav',
         noteNumber: 7
     }, {
         name: 'g-sharp',
         id: 'G#',
-        path: '../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track)23.wav',
+        path: '../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track).23.wav',
         noteNumber: 8
     }, {
         name: 'a',
         id: 'A',
-        path: '../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track)27.wav',
+        path: '../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track).27.wav',
         noteNumber: 9
     }, {
         name: 'a-sharp',
         id: 'A#',
-        path: '../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track)31.wav',
+        path: '../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track).31.wav',
         noteNumber: 10
     }, {
         name: 'b',
         id: 'A#',
-        path: '../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track)3.wav',
+        path: '../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track).3.wav',
         noteNumber: 11
     }]
 };
