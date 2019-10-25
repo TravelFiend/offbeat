@@ -149,3 +149,7 @@ a {
     top: 35%;
     left: 5%;
 }
+
+.hidden {
+    visibility: hidden;
+};
