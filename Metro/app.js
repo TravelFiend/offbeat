@@ -10,7 +10,7 @@ import { saveSettings, storeUser } from '../Common/storeUser.js';
 import { loadUser } from '../Common/load-user.js';
 import { changeTheme } from '../Common/change-theme.js';
 import { whiteKeysColorChange, blackKeysColorChange, toggleRecColor } from './color-change.js';
-import { generateKeySoundListItem } from '../utils/generateKeySoundListItem.js';
+import { generateKeySoundListItem } from '../Utils/generateKeySoundListItem.js';
 import { hideUnusedMetro } from '../Metro/hideUnusedMetro.js';
 
 let user = loadUser();

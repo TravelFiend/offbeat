@@ -1,5 +1,5 @@
-import { storeUser } from '../Common/storeUser.js';
-import { loadTheme } from '../Common/load-theme.js';
+import { loadTheme } from '/offbeat/Common/load-theme.js';
+import { storeUser } from '/offbeat/Common/storeUser.js';
 
 
 loadTheme();
@@ -36,5 +36,5 @@ table.addEventListener('click', (event) => {
     let newPatternArray = patternString.split(',');
     user.currentProject = newPatternArray;
     storeUser(user);
-    window.location = '../Metro';
+    window.location = '/offbeat/Metro';
 });
