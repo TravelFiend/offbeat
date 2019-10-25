@@ -177,3 +177,6 @@ button:hover {
 #time-sig {
     margin-left: 5px
 }
+.hidden {
+    display: none;
+};

@@ -11,6 +11,7 @@ import { loadUser } from '../Common/load-user.js';
 import { changeTheme } from '../Common/change-theme.js';
 import { whiteKeysColorChange, blackKeysColorChange } from './color-change.js';
 import { generateKeySoundListItem } from '../utils/generateKeySoundListItem.js';
+import { hideUnusedMetro } from '../Metro/hideUnusedMetro.js';
 
 let user = loadUser();
 let theme = user.theme;
@@ -56,6 +57,10 @@ const downBeatSoundForm = document.getElementById('downbeat-sound');
 metroSoundForm.appendChild(generateMetroSoundList(metroSounds));
 downBeatSoundForm.appendChild(generateDownBeat(metroSounds));
 
+let beatMenu = document.getElementById('time-sig');
+beatMenu.addEventListener('change', () => {
+    hideUnusedMetro(beatMenu.value);
+});
 
 const start = document.getElementById('start');
 start.addEventListener('click', () => {
@@ -64,6 +69,7 @@ start.addEventListener('click', () => {
     let BPM = parseInt(BPMElement.value);
     
     let beats = Number(document.getElementById('time-sig').value);
+
     let metroSound = document.getElementById('metronome-sound-menu').value;
     let downBeatSound = document.getElementById('downbeat-sound-menu').value;
     let runningClock = clock(BPM, metroSound, downBeatSound, beats);
@@ -101,7 +107,6 @@ function recordEventTakeTwo() {
 
 function recordNote() {
     let id = event.target.id;
-    console.log(sbSelect.value);
     currentRecording.push(id);
 }
 
@@ -124,7 +129,6 @@ function newFunk(sbSelect, array) {
         sbSelect.forEach(sound => {
             if (sound.name === array[i]) {
                 soundPathArray.push(sound.path);
-                console.log(soundPathArray);
             }
             
         });
@@ -139,7 +143,6 @@ playRecordingButton.addEventListener('click', () => {
     let BPM = parseInt(BPMElement.value);
     let sbValue = findSb(soundBoards);
     let pathArray = newFunk(sbValue, user.currentProject);
-    playBack(BPM, pathArray);
     let runningPlayback = playBack(BPM, pathArray);
     playRecordingButton.disabled = true;
 

@@ -16,7 +16,6 @@ userData.addEventListener('submit', function(event){
 
 themePicker.addEventListener('change', (event) => {
     let theme = event.target.value;
-    console.log(theme);
     hotBod.style.backgroundColor = colorObject[theme].background;
     hotBod.style.color = colorObject[theme].main;
 });
