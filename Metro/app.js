@@ -111,12 +111,12 @@ function saveRecording() {
     storeUser(user);
 }
 
-function findSb(sb, value) {
+function findSb(sb) {
+    let sbSelect = document.getElementById('select-soundbank');
     for (let i = 0; i < sb.length; i++) {
-        if (sb[i].title === value) return sb[i].sounds;
+        if (sb[i].title === sbSelect.value) return sb[i].sounds;
     }
 }
-let sbValue = findSb(soundBoards, sbSelect.value);
 
 function newFunk(sbSelect, array) {
     let soundPathArray = [];
@@ -132,12 +132,19 @@ function newFunk(sbSelect, array) {
     return soundPathArray;
 }
 
-const pathArray = newFunk(sbValue, user.currentProject);
-console.log(newFunk(sbValue, user.currentProject));
-
 const playRecordingButton = document.getElementById('play-record');
+const stopPlaybackButton = document.getElementById('stop-record');
 playRecordingButton.addEventListener('click', () => {
     let BPMElement = document.getElementById('bpm');
     let BPM = parseInt(BPMElement.value);
+    let sbValue = findSb(soundBoards);
+    let pathArray = newFunk(sbValue, user.currentProject);
     playBack(BPM, pathArray);
+    let runningPlayback = playBack(BPM, pathArray);
+    playRecordingButton.disabled = true;
+
+    stopPlaybackButton.addEventListener('click', () => {
+        playRecordingButton.disabled = false;
+        clearTimeout(runningPlayback);
+    });
 });
