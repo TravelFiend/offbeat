@@ -1,5 +1,8 @@
 import { storeUser } from '../Common/storeUser.js';
+import { loadTheme } from '../Common/load-theme.js';
 
+
+loadTheme();
 let patternTable = document.querySelector('tbody');
 
 const user = JSON.parse(localStorage.getItem('user'));

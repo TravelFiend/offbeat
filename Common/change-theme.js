@@ -11,7 +11,7 @@ export function changeTheme() {
     let theme = event.target.value;
     let mainColor = colorObject[theme].main;
     let backColor = colorObject[theme].background;
-
+    
     body.style.backgroundColor = backColor;
     body.style.color = mainColor;
 
