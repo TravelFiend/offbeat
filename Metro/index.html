@@ -13,11 +13,14 @@
     <div id="header">
         <h1>OFFBEAT</h1>
         <header>
-                <p>
-                    <span id="project-name"></span> by <span id="user-name"></span>
-                </p>
-                <a href="/offbeat/About/index.html">about us</a>
-                <a href="/offbeat/Seq">Your Patterns</a>
+            <div>
+                <span id="project-name"></span><span id="by">  by  </span><span id="user-name"></span>
+            </div>
+            <nav>
+                <a href="/offbeat/./">Home</a>
+                <a href="/offbeat/./About/index.html">About Us</a>
+                <a href="/offbeat/./Seq">Your Patterns</a>
+            </nav>
         </header>
     </div>
 
@@ -68,53 +71,53 @@
 
         <div id="soundbank-legend">
                 <h2>Soundbank Legend</h2>
-                <ul>
+                <ul id="legend-lists">
                     <li class="legend">
-                        C:
+                        C
                         <span id="step-0">Empty</span>
                     </li>
                     <li class="legend">
-                        C#:
+                        C#
                         <span id="step-1">Empty</span>
                     </li>
                     <li class="legend">
-                        D:
+                        D
                         <span id="step-2">Empty</span>
                     </li>
                     <li class="legend">
-                        D#:
+                        D#
                         <span id="step-3">Empty</span>
                     </li>
                     <li class="legend">
-                        E:
+                        E
                         <span id="step-4">Empty</span>
                     </li>
                     <li class="legend">
-                        F:
+                        F
                         <span id="step-5">Empty</span>
                     </li>
                     <li class="legend">
-                        F#:
+                        F#
                         <span id="step-6">Empty</span>
                     </li>
                     <li class="legend">
-                        G:
+                        G
                         <span id="step-7">Empty</span>
                     </li>
                     <li class="legend">
-                        G#:
+                        G#
                         <span id="step-8">Empty</span>
                     </li>
                     <li class="legend">
-                        A:
+                        A
                         <span id="step-9">Empty</span>
                     </li>
                     <li class="legend">
-                        A#:
+                        A#
                         <span id="step-10">Empty</span>
                     </li>
                     <li class="legend">
-                        B:
+                        B
                         <span id="step-11">Empty</span>
                     </li>
                 </ul>
@@ -151,9 +154,9 @@
                 </form>
                 Time Signature 
                 <select id="time-sig" name="time-sig">
-                    <option name="2/4" value="2">2/4</option>
-                    <option name="3/4" value="3">3/4</option>
                     <option name="4/4" value="4">4/4</option>
+                    <option name="3/4" value="3">3/4</option>
+                    <option name="2/4" value="2">2/4</option>
                 </select>
             </div>
             <button id="save-sound">Save Settings</button>
