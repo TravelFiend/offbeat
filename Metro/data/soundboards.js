@@ -80,7 +80,7 @@ const synthBank =
         sounds : [{   
             name: 'c',
             id:'Pad1',
-            path:'../assets/ian-sounds/Abduct _ad1.wav',
+            path:'../assets/ian-sounds/Abduct_ad1.wav',
             noteNumber: 0
         }, {
             name: 'c-sharp',
@@ -278,62 +278,62 @@ const luda = {
     title : 'Luda',
     sounds :  [{
         name: 'c',
-        id: 'C',
+        id: 'Horoscope',
         path: '../../assets/ludacris/Area_Codes.7.wav',
         noteNumber: 0
     }, {
         name: 'c-sharp',
-        id: 'C#',
+        id: 'F*c* it',
         path: '../../assets/ludacris/Get_Up_Get_Out.7.wav',
         noteNumber: 1
     }, {
         name: 'd',
-        id: 'D',
+        id: 'F*c* Up',
         path: '../../assets/ludacris/Get_Up_Get_Out.11.wav',
         noteNumber: 2
     }, {
         name: 'd-sharp',
-        id: 'D#',
+        id: 'OOOoooo',
         path: '../../assets/ludacris/Blueberry_Yum_Yum_Lyrics.3.wav',
         noteNumber: 3
     }, {
         name: 'e',
-        id: 'E',
+        id: 'Break It Down',
         path: '../../assets/ludacris/Blueberry_Yum_Yum_Lyrics.7.wav',
         noteNumber: 4
     }, {
         name: 'f',
-        id: 'F',
+        id: 'Stop Drop and',
         path: '../../assets/ludacris/Blueberry_Yum_Yum_Lyrics.11.wav',
         noteNumber: 5
     }, {
         name: 'f-sharp',
-        id: 'F#',
+        id: 'Stankin\' Lincoln',
         path: '../../assets/ludacris/Blueberry_Yum_Yum_Lyrics.15.wav',
         noteNumber: 6
     }, {
         name: 'g',
-        id: 'G',
+        id: 'Eat Everything',
         path: '../../assets/ludacris/Blueberry_Yum_Yum_Lyrics.19.wav',
         noteNumber: 7
     }, {
         name: 'g-sharp',
-        id: 'G#',
+        id: 'Swag',
         path: '../../assets/ludacris/What_Them_Girls_Like_(Album Version_(Edited)).3.wav',
         noteNumber: 8
     }, {
         name: 'a',
-        id: 'A',
+        id: 'Out The Kitchen',
         path: '../../assets/ludacris/What_Them_Girls_Like_(Album Version_(Edited)).19.wav',
         noteNumber: 9
     }, {
         name: 'a-sharp',
-        id: 'A#',
+        id: 'Send Em\'',
         path: '../../assets/ludacris/What_Them_Girls_Like_(Album Version_(Edited)).21.wav',
         noteNumber: 10
     }, {
         name: 'b',
-        id: 'A#',
+        id: 'Milk tha Cow',
         path: '../../assets/ludacris/Yeah!_Usher_featuring_Lil_Jon and_Ludacris.3.wav',
         noteNumber: 11
     }]
@@ -532,5 +532,5 @@ const peeWee = {
     }]
 };
 
-const soundBoards = [board1, synthBank, mikeBank, tones, luda, wiz, cMinor, peeWee];
+const soundBoards = [tones, board1, synthBank, mikeBank, luda, wiz, cMinor, peeWee];
 export { soundBoards };
