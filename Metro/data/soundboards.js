@@ -319,17 +319,17 @@ const luda = {
     }, {
         name: 'g-sharp',
         id: 'Swag',
-        path: '../assets/ludacris/What_Them_Girls_Like_(Album Version_(Edited)).3.wav',
+        path: '../assets/ludacris/What_Them_Girls_Like_(Album_Version_(Edited)).3.wav',
         noteNumber: 8
     }, {
         name: 'a',
         id: 'Out The Kitchen',
-        path: '../assets/ludacris/What_Them_Girls_Like_(Album Version_(Edited)).19.wav',
+        path: '../assets/ludacris/What_Them_Girls_Like_(Album_Version_(Edited)).19.wav',
         noteNumber: 9
     }, {
         name: 'a-sharp',
         id: 'Send Em\'',
-        path: '../assets/ludacris/What_Them_Girls_Like_(Album Version_(Edited)).21.wav',
+        path: '../assets/ludacris/What_Them_Girls_Like_(Album_Version_(Edited)).21.wav',
         noteNumber: 10
     }, {
         name: 'b',
