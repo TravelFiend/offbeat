@@ -124,14 +124,13 @@ function newFunk(sbSelect, array) {
     let soundPathArray = [];
     for (let i = 0; i < array.length; i++) {
         sbSelect.forEach(sound => {
-            if (sound.name === array[i].id) {
+            if (sound.name === array[i]) {
                 soundPathArray.push(sound.path);
                 console.log(soundPathArray);
             }
             
         });
     }
-    debugger;
     return soundPathArray;
 }
 
