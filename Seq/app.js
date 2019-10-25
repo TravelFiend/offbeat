@@ -1,5 +1,8 @@
+import { loadTheme } from '/offbeat/Common/load-theme.js';
 import { storeUser } from '/offbeat/Common/storeUser.js';
 
+
+loadTheme();
 let patternTable = document.querySelector('tbody');
 
 const user = JSON.parse(localStorage.getItem('user'));
