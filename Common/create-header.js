@@ -6,6 +6,6 @@ export const createHeader = () => {
 
     const user = loadUser();
 
-    projectName.textContent = user.project;
+    projectName.textContent = user.projectName;
     userName.textContent = user.name;
 };
