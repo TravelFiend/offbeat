@@ -76,7 +76,7 @@ start.addEventListener('click', () => {
     let runningClock = clock(BPM, metroSound, downBeatSound, beats);
 
     const stop = document.getElementById('stop');
-    stop.addEventListener('input', () => {
+    stop.addEventListener('click', () => {
         start.disabled = false;
         clearTimeout(runningClock);
         resetMetState();
@@ -136,8 +136,6 @@ function newFunk(sbSelect, array) {
     }
     return soundPathArray;
 }
-
-const pathArray = newFunk(sbValue, user.currentProject);
 
 const playRecordingButton = document.getElementById('play-record');
 const stopPlaybackButton = document.getElementById('stop-record');
