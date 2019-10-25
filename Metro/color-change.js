@@ -52,3 +52,11 @@ export function blackKeysColorChange(theme) {
         blackKeys[i].style.color = secondaryColor;
     }
 }
+
+export function toggleRecColor(button, boolean) {
+    if (boolean) {
+        button.style.color = 'red';
+    } else {
+        button.style.color = 'white';
+    }
+}

@@ -532,5 +532,5 @@ const peeWee = {
     }]
 };
 
-const soundBoards = [board1, synthBank, mikeBank, tones, luda, wiz, cMinor, peeWee];
+const soundBoards = [tones, board1, synthBank, mikeBank, luda, wiz, cMinor, peeWee];
 export { soundBoards };
