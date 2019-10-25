@@ -23,7 +23,7 @@ header{
     padding: 0 20px;
 }
 
-h1{
+h1 {
     font-family: 'Baloo Bhai', cursive;
     font-size: 50px;
     width: 100%;
@@ -130,6 +130,7 @@ ul {
 
 a {
     text-decoration: none;
+    margin-left: 40px;
 }
 
 .user-settings {
@@ -156,7 +157,7 @@ button {
     color: white;
     background-color: black;
     border-radius: 10px;
-    border: solid 2px;
+    border: solid 2px gray;
 }
 
 button:hover {
@@ -180,3 +181,7 @@ button:hover {
 .hidden {
     display: none;
 };
+
+p {
+    margin-left: 90px;
+}
