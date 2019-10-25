@@ -4,13 +4,13 @@ export const metroSounds = [
         path: '../assets/metro-sounds/rimshotshort.wav'
     }, {
         name: '880hz',
-        path: '../assets/metro-sounds/880hz 50ms.mp3'
+        path: '../assets/metro-sounds/880hz_50ms.mp3'
     }, {
         name: '659hz',
-        path: '../assets/metro-sounds/659hz 50ms.mp3'
+        path: '../assets/metro-sounds/659hz_50ms.mp3'
     },
     {
         name: 'Throw in The Towel',
-        path: '../assets/ludacris/Get Up Get Out.7.wav'
+        path: '../assets/ludacris/Get_Up_Get_Out7.wav'
     }
 ];

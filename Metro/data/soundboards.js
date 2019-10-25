@@ -215,62 +215,62 @@ const tones = {
     sounds :  [{
         name: 'c',
         id: 'C',
-        path: '../../assets/metro-sounds/classicElectricPiano/Classic_Electric_Pianocpitch.wav',
+        path: '../assets/metro-sounds/classicElectricPiano/Classic_Electric_Pianocpitch.wav',
         noteNumber: 0
     }, {
         name: 'c-sharp',
         id: 'C#',
-        path: '../../assets/metro-sounds/classicElectricPiano/Classic_Electric_Pianocsharp.wav',
+        path: '../assets/metro-sounds/classicElectricPiano/Classic_Electric_Pianocsharp.wav',
         noteNumber: 1
     }, {
         name: 'd',
         id: 'Dial-up',
-        path: '../../assets/metro-sounds/classicElectricPiano/Classic_Electric_Pianodpitch.wav',
+        path: '../assets/metro-sounds/classicElectricPiano/Classic_Electric_Pianodpitch.wav',
         noteNumber: 2
     }, {
         name: 'd-sharp',
         id: 'D#',
-        path: '../../assets/metro-sounds/classicElectricPiano/Classic_Electric_Pianodsharp.wav',
+        path: '../assets/metro-sounds/classicElectricPiano/Classic_Electric_Pianodsharp.wav',
         noteNumber: 3
     }, {
         name: 'e',
         id: 'E',
-        path: '../../assets/metro-sounds/classicElectricPiano/Classic_Electric_Pianoepitch.wav',
+        path: '../assets/metro-sounds/classicElectricPiano/Classic_Electric_Pianoepitch.wav',
         noteNumber: 4
     }, {
         name: 'f',
         id: 'F',
-        path: '../../assets/metro-sounds/classicElectricPiano/Classic_Electric_Pianofpitch.wav',
+        path: '../assets/metro-sounds/classicElectricPiano/Classic_Electric_Pianofpitch.wav',
         noteNumber: 5
     }, {
         name: 'f-sharp',
         id: 'F#',
-        path: '../../assets/metro-sounds/classicElectricPiano/Classic_Electric_Pianofsharp.wav',
+        path: '../assets/metro-sounds/classicElectricPiano/Classic_Electric_Pianofsharp.wav',
         noteNumber: 6
     }, {
         name: 'g',
         id: 'G',
-        path: '../../assets/metro-sounds/classicElectricPiano/Classic_Electric_Pianogpitch.wav',
+        path: '../assets/metro-sounds/classicElectricPiano/Classic_Electric_Pianogpitch.wav',
         noteNumber: 7
     }, {
         name: 'g-sharp',
         id: 'G#',
-        path: '../../assets/metro-sounds/classicElectricPiano/Classic_Electric_Pianogsharp.wav',
+        path: '../assets/metro-sounds/classicElectricPiano/Classic_Electric_Pianogsharp.wav',
         noteNumber: 8
     }, {
         name: 'a',
         id: 'A',
-        path: '../../assets/metro-sounds/classicElectricPiano/Classic_Electric_Pianoapitch.wav',
+        path: '../assets/metro-sounds/classicElectricPiano/Classic_Electric_Pianoapitch.wav',
         noteNumber: 9
     }, {
         name: 'a-sharp',
         id: 'A#',
-        path: '../../assets/metro-sounds/classicElectricPiano/Classic_Electric_Pianoasharp.wav',
+        path: '../assets/metro-sounds/classicElectricPiano/Classic_Electric_Pianoasharp.wav',
         noteNumber: 10
     }, {
         name: 'b',
         id: 'A#',
-        path: '../../assets/metro-sounds/classicElectricPiano/Classic_Electric_Pianobpitch.wav',
+        path: '../assets/metro-sounds/classicElectricPiano/Classic_Electric_Pianobpitch.wav',
         noteNumber: 11
     }]
 };
@@ -279,62 +279,62 @@ const luda = {
     sounds :  [{
         name: 'c',
         id: 'Horoscope',
-        path: '../../assets/ludacris/Area_Codes.7.wav',
+        path: '../assets/ludacris/Area_Codes7.wav',
         noteNumber: 0
     }, {
         name: 'c-sharp',
         id: 'F*c* it',
-        path: '../../assets/ludacris/Get_Up_Get_Out.7.wav',
+        path: '../assets/ludacris/Get_Up_Get_Out7.wav',
         noteNumber: 1
     }, {
         name: 'd',
         id: 'F*c* Up',
-        path: '../../assets/ludacris/Get_Up_Get_Out.11.wav',
+        path: '../assets/ludacris/Get_Up_Get_Out11.wav',
         noteNumber: 2
     }, {
         name: 'd-sharp',
         id: 'OOOoooo',
-        path: '../../assets/ludacris/Blueberry_Yum_Yum_Lyrics.3.wav',
+        path: '../assets/ludacris/Blueberry_Yum_Yum_Lyrics3.wav',
         noteNumber: 3
     }, {
         name: 'e',
         id: 'Break It Down',
-        path: '../../assets/ludacris/Blueberry_Yum_Yum_Lyrics.7.wav',
+        path: '../assets/ludacris/Blueberry_Yum_Yum_Lyrics7.wav',
         noteNumber: 4
     }, {
         name: 'f',
         id: 'Stop Drop and',
-        path: '../../assets/ludacris/Blueberry_Yum_Yum_Lyrics.11.wav',
+        path: '../assets/ludacris/Blueberry_Yum_Yum_Lyrics11.wav',
         noteNumber: 5
     }, {
         name: 'f-sharp',
         id: 'Stankin\' Lincoln',
-        path: '../../assets/ludacris/Blueberry_Yum_Yum_Lyrics.15.wav',
+        path: '../assets/ludacris/Blueberry_Yum_Yum_Lyrics15.wav',
         noteNumber: 6
     }, {
         name: 'g',
         id: 'Eat Everything',
-        path: '../../assets/ludacris/Blueberry_Yum_Yum_Lyrics.19.wav',
+        path: '../assets/ludacris/Blueberry_Yum_Yum_Lyrics19.wav',
         noteNumber: 7
     }, {
         name: 'g-sharp',
         id: 'Swag',
-        path: '../../assets/ludacris/What_Them_Girls_Like_(Album Version_(Edited)).3.wav',
+        path: '../assets/ludacris/What_Them_Girls_Like_(Album Version_(Edited))3.wav',
         noteNumber: 8
     }, {
         name: 'a',
         id: 'Out The Kitchen',
-        path: '../../assets/ludacris/What_Them_Girls_Like_(Album Version_(Edited)).19.wav',
+        path: '../assets/ludacris/What_Them_Girls_Like_(Album Version_(Edited))19.wav',
         noteNumber: 9
     }, {
         name: 'a-sharp',
         id: 'Send Em\'',
-        path: '../../assets/ludacris/What_Them_Girls_Like_(Album Version_(Edited)).21.wav',
+        path: '../assets/ludacris/What_Them_Girls_Like_(Album Version_(Edited))21.wav',
         noteNumber: 10
     }, {
         name: 'b',
         id: 'Milk tha Cow',
-        path: '../../assets/ludacris/Yeah!_Usher_featuring_Lil_Jon and_Ludacris.3.wav',
+        path: '../assets/ludacris/Yeah!_Usher_featuring_Lil_Jon and_Ludacris3.wav',
         noteNumber: 11
     }]
 };
@@ -343,62 +343,62 @@ const wiz = {
     sounds :  [{
         name: 'c',
         id: 'C',
-        path: '../../assets/wiz-khalifa/Hustlin.3.wav',
+        path: '../assets/wiz-khalifa/Hustlin3.wav',
         noteNumber: 0
     }, {
         name: 'c-sharp',
         id: 'C#',
-        path: '../../assets/wiz-khalifa/Hustlin.11.wav',
+        path: '../assets/wiz-khalifa/Hustlin11.wav',
         noteNumber: 1
     }, {
         name: 'd',
         id: 'D',
-        path: '../../assets/wiz-khalifa/Hustlin.15.wav',
+        path: '../assets/wiz-khalifa/Hustlin15.wav',
         noteNumber: 2
     }, {
         name: 'd-sharp',
         id: 'D#',
-        path: '../../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track).3.wav',
+        path: '../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track)3.wav',
         noteNumber: 3
     }, {
         name: 'e',
         id: 'E',
-        path: '../../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track).7.wav',
+        path: '../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track)7.wav',
         noteNumber: 4
     }, {
         name: 'f',
         id: 'F',
-        path: '../../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track).11.wav',
+        path: '../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track)11.wav',
         noteNumber: 5
     }, {
         name: 'f-sharp',
         id: 'F#',
-        path: '../../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track).15.wav',
+        path: '../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track)15.wav',
         noteNumber: 6
     }, {
         name: 'g',
         id: 'G',
-        path: '../../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track).19.wav',
+        path: '../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track)19.wav',
         noteNumber: 7
     }, {
         name: 'g-sharp',
         id: 'G#',
-        path: '../../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track).23.wav',
+        path: '../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track)23.wav',
         noteNumber: 8
     }, {
         name: 'a',
         id: 'A',
-        path: '../../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track).27.wav',
+        path: '../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track)27.wav',
         noteNumber: 9
     }, {
         name: 'a-sharp',
         id: 'A#',
-        path: '../../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track).31.wav',
+        path: '../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track)31.wav',
         noteNumber: 10
     }, {
         name: 'b',
         id: 'A#',
-        path: '../../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track).3.wav',
+        path: '../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track)3.wav',
         noteNumber: 11
     }]
 };
@@ -407,62 +407,62 @@ const cMinor = {
     sounds :  [{
         name: 'c',
         id: 'C',
-        path: '../../assets/clavChords/70s_Funk_ClavC.wav',
+        path: '../assets/clavChords/70s_Funk_ClavC.wav',
         noteNumber: 0
     }, {
         name: 'c-sharp',
         id: 'C#',
-        path: '../../assets/clavChords/70s_Funk_ClavDflat.wav',
+        path: '../assets/clavChords/70s_Funk_ClavDflat.wav',
         noteNumber: 1
     }, {
         name: 'd',
         id: 'D',
-        path: '../../assets/clavChords/70s_Funk_ClavD.wav',
+        path: '../assets/clavChords/70s_Funk_ClavD.wav',
         noteNumber: 2
     }, {
         name: 'd-sharp',
         id: 'D#',
-        path: '../../assets/clavChords/70s_Funk_ClavEflat.wav',
+        path: '../assets/clavChords/70s_Funk_ClavEflat.wav',
         noteNumber: 3
     }, {
         name: 'e',
         id: 'E',
-        path: '../../assets/clavChords/70s_Funk_ClavE.wav',
+        path: '../assets/clavChords/70s_Funk_ClavE.wav',
         noteNumber: 4
     }, {
         name: 'f',
         id: 'F',
-        path: '../../assets/clavChords/70s_Funk_ClavF.wav',
+        path: '../assets/clavChords/70s_Funk_ClavF.wav',
         noteNumber: 5
     }, {
         name: 'f-sharp',
         id: 'F#',
-        path: '../../assets/clavChords/70s_Funk_ClavFsharp.wav',
+        path: '../assets/clavChords/70s_Funk_ClavFsharp.wav',
         noteNumber: 6
     }, {
         name: 'g',
         id: 'G',
-        path: '../../assets/clavChords/70s_Funk_ClavG.wav',
+        path: '../assets/clavChords/70s_Funk_ClavG.wav',
         noteNumber: 7
     }, {
         name: 'g-sharp',
         id: 'G#',
-        path: '../../assets/clavChords/70s_Funk_ClavAflat.wav',
+        path: '../assets/clavChords/70s_Funk_ClavAflat.wav',
         noteNumber: 8
     }, {
         name: 'a',
         id: 'A',
-        path: '../../assets/clavChords/70s_Funk_ClavA.wav',
+        path: '../assets/clavChords/70s_Funk_ClavA.wav',
         noteNumber: 9
     }, {
         name: 'a-sharp',
         id: 'A#',
-        path: '../../assets/clavChords/70s_Funk_ClavBflat.wav',
+        path: '../assets/clavChords/70s_Funk_ClavBflat.wav',
         noteNumber: 10
     }, {
         name: 'b',
         id: 'A#',
-        path: '../../assets/clavChords/70s_Funk_ClavB.wav',
+        path: '../assets/clavChords/70s_Funk_ClavB.wav',
         noteNumber: 11
     }]
 };
@@ -472,62 +472,62 @@ const peeWee = {
     sounds :  [{
         name: 'c',
         id: 'Aaahhhh',
-        path: '../../assets/joels-sounds/aahhhh.wav',
+        path: '../assets/joels-sounds/aahhhh.wav',
         noteNumber: 0
     }, {
         name: 'c-sharp',
         id: 'Big Butt',
-        path: '../../assets/joels-sounds/big_but.wav',
+        path: '../assets/joels-sounds/big_but.wav',
         noteNumber: 1
     }, {
         name: 'd',
         id: 'I Dont Know',
-        path: '../../assets/joels-sounds/dont_know.wav',
+        path: '../assets/joels-sounds/dont_know.wav',
         noteNumber: 2
     }, {
         name: 'd-sharp',
         id: 'Ha ha heh heh',
-        path: '../../assets/joels-sounds/ha_ha_heh_heh.wav',
+        path: '../assets/joels-sounds/ha_ha_heh_heh.wav',
         noteNumber: 3
     }, {
         name: 'e',
         id: 'Huh huh',
-        path: '../../assets/joels-sounds/huh_huh.wav',
+        path: '../assets/joels-sounds/huh_huh.wav',
         noteNumber: 4
     }, {
         name: 'f',
         id: 'I know you are',
-        path: '../../assets/joels-sounds/know_you_are1.wav',
+        path: '../assets/joels-sounds/know_you_are1.wav',
         noteNumber: 5
     }, {
         name: 'f-sharp',
         id: 'La la la',
-        path: '../../assets/joels-sounds/la_la_la.wav',
+        path: '../assets/joels-sounds/la_la_la.wav',
         noteNumber: 6
     }, {
         name: 'g',
         id: 'Rahhr',
-        path: '../../assets/joels-sounds/rahhr.wav',
+        path: '../assets/joels-sounds/rahhr.wav',
         noteNumber: 7
     }, {
         name: 'g-sharp',
         id: 'Significance',
-        path: '../../assets/joels-sounds/significance.wav',
+        path: '../assets/joels-sounds/significance.wav',
         noteNumber: 8
     }, {
         name: 'a',
         id: 'Sorry',
-        path: '../../assets/joels-sounds/sorry.wav',
+        path: '../assets/joels-sounds/sorry.wav',
         noteNumber: 9
     }, {
         name: 'a-sharp',
         id: 'Too late',
-        path: '../../assets/joels-sounds/too_late.wav',
+        path: '../assets/joels-sounds/too_late.wav',
         noteNumber: 10
     }, {
         name: 'b',
         id: 'Use the phone',
-        path: '../../assets/joels-sounds/use_the_phone.wav',
+        path: '../assets/joels-sounds/use_the_phone.wav',
         noteNumber: 11
     }]
 };
