@@ -139,7 +139,6 @@ playRecordingButton.addEventListener('click', () => {
     let BPM = parseInt(BPMElement.value);
     let sbValue = findSb(soundBoards);
     let pathArray = newFunk(sbValue, user.currentProject);
-    playBack(BPM, pathArray);
     let runningPlayback = playBack(BPM, pathArray);
     playRecordingButton.disabled = true;
 
