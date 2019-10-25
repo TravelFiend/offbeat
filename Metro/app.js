@@ -11,14 +11,11 @@ import { loadUser } from '../Common/load-user.js';
 import { changeTheme } from '../Common/change-theme.js';
 import { whiteKeysColorChange, blackKeysColorChange } from './color-change.js';
 import { generateKeySoundListItem } from '../utils/generateKeySoundListItem.js';
-import { masterSoundList } from '../assets/master-list-of-sounds/masterSoundList.js';
 
 let user = loadUser();
 let theme = user.theme;
 
 let currentRecording = [];
-
-// const playBackItem = newFunk(sbSelect).currentProject;
 
 const saveSound = document.getElementById('save-sound');
 const keyboardSoundSelect = document.getElementById('select-soundbank');
@@ -38,6 +35,7 @@ blackKeysColorChange(theme);
 mapSound(soundBoard, note);
 
 generateKeySoundListItem(soundBoards);
+
 
 keyboardSoundSelect.addEventListener('input', (event) => {
     soundBoards.forEach(soundObj => {
