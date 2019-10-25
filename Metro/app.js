@@ -11,11 +11,8 @@ import { loadUser } from '../Common/load-user.js';
 import { changeTheme } from '../Common/change-theme.js';
 import { whiteKeysColorChange, blackKeysColorChange } from './color-change.js';
 import { generateKeySoundListItem } from '../utils/generateKeySoundListItem.js';
-<<<<<<< HEAD
 import { hideUnusedMetro} from '../Metro/hideUnusedMetro.js';
 import { masterSoundList } from '../assets/master-list-of-sounds/masterSoundList.js';
-=======
->>>>>>> 7291fc40381444cea89c567e85c846c6c6c0b18a
 
 let user = loadUser();
 let theme = user.theme;
@@ -140,11 +137,8 @@ function newFunk(sbSelect, array) {
     return soundPathArray;
 }
 
-<<<<<<< HEAD
 const pathArray = newFunk(sbValue, user.currentProject);
 
-=======
->>>>>>> 7291fc40381444cea89c567e85c846c6c6c0b18a
 const playRecordingButton = document.getElementById('play-record');
 const stopPlaybackButton = document.getElementById('stop-record');
 playRecordingButton.addEventListener('click', () => {
