@@ -1,4 +1,4 @@
-import { storeUser } from '../Common/storeUser.js';
+import { storeUser } from '/offbeat/Common/storeUser.js';
 
 let patternTable = document.querySelector('tbody');
 
@@ -33,5 +33,5 @@ table.addEventListener('click', (event) => {
     let newPatternArray = patternString.split(',');
     user.currentProject = newPatternArray;
     storeUser(user);
-    window.location = '../Metro';
+    window.location = '/offbeat/Metro';
 });

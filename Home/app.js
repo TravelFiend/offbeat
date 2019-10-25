@@ -11,7 +11,7 @@ userData.addEventListener('submit', function(event){
     const formData = new FormData(userData);
     const user = createUser(formData);
     storeUser(user);
-    window.location = '../Metro';
+    window.location = '/offbeat/Metro';
 });
 
 themePicker.addEventListener('change', (event) => {
