@@ -11,6 +11,7 @@ import { loadUser } from '../Common/load-user.js';
 import { changeTheme } from '../Common/change-theme.js';
 import { whiteKeysColorChange, blackKeysColorChange } from './color-change.js';
 import { generateKeySoundListItem } from '../utils/generateKeySoundListItem.js';
+import { masterSoundList } from '../assets/master-list-of-sounds/masterSoundList.js';
 
 let user = loadUser();
 let theme = user.theme;

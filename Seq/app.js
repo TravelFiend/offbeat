@@ -1,32 +1,37 @@
-const AudioContext = window.AudioContext;
-const audioCtx = new AudioContext();
+import { storeUser } from '../Common/storeUser.js';
 
-let osc1 = audioCtx.createOscillator();
-osc1.type = 'square';
-osc1.frequency.value = 680;
+let patternTable = document.querySelector('tbody');
 
-let amp = audioCtx.createGain();
+const user = JSON.parse(localStorage.getItem('user'));
+let projectArray = user.projects;
 
-osc1.connect(amp).connect(audioCtx.destination);
-
-let osc1freq = document.getElementById('osc1Freq');
-osc1freq.addEventListener('input', () => {
-    osc1.frequency.value = osc1freq.value;
-});
-
-let ampRange = document.getElementById('ampGain');
-ampRange.addEventListener('input', () => {
-    amp.gain.value = ampRange.value;
-}, false);
-
-//const sampleSource = audioCtx.createBufferSource();
-//sampleSource.buffer =  FileReader() '../assets/middle-C-clarinet.wav';
-//console.log(sampleSource);  
-
-let sampleTrigger = document.getElementById('sampleTrigger');
-sampleTrigger.addEventListener('click', () => {
+const renderPattern = (pattern) => {
+    let row = document.createElement('tr');
+    let dataCellForButton = document.createElement('td');
+    let loadButton = document.createElement('button');
+    loadButton.textContent = 'LOAD';
+    dataCellForButton.appendChild(loadButton);
+    row.appendChild(dataCellForButton);
+    
+    let cellSound = document.createElement('td');
+    cellSound.textContent = pattern;
+    row.appendChild(cellSound);
+    
+    return row;
+};
+projectArray.forEach(pattern => {
+    let currentPattern = renderPattern(pattern);
+    patternTable.appendChild(currentPattern);
 
 });
 
+let table = document.querySelector('table');
 
-osc1.start();
+table.addEventListener('click', (event) => {
+    let buttonToLoad = event.target;
+    let patternString = buttonToLoad.parentElement.nextSibling.textContent;
+    let newPatternArray = patternString.split(',');
+    user.currentProject = newPatternArray;
+    storeUser(user);
+    window.location = '../Metro';
+});
