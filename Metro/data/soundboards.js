@@ -338,70 +338,7 @@ const luda = {
         noteNumber: 11
     }]
 };
-const wiz = {
-    title : 'wiz',
-    sounds :  [{
-        name: 'c',
-        id: 'C',
-        path: '../assets/wiz-khalifa/Hustlin3.wav',
-        noteNumber: 0
-    }, {
-        name: 'c-sharp',
-        id: 'C#',
-        path: '../assets/wiz-khalifa/Hustlin11.wav',
-        noteNumber: 1
-    }, {
-        name: 'd',
-        id: 'D',
-        path: '../assets/wiz-khalifa/Hustlin15.wav',
-        noteNumber: 2
-    }, {
-        name: 'd-sharp',
-        id: 'D#',
-        path: '../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track)3.wav',
-        noteNumber: 3
-    }, {
-        name: 'e',
-        id: 'E',
-        path: '../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track)7.wav',
-        noteNumber: 4
-    }, {
-        name: 'f',
-        id: 'F',
-        path: '../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track)11.wav',
-        noteNumber: 5
-    }, {
-        name: 'f-sharp',
-        id: 'F#',
-        path: '../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track)15.wav',
-        noteNumber: 6
-    }, {
-        name: 'g',
-        id: 'G',
-        path: '../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track)19.wav',
-        noteNumber: 7
-    }, {
-        name: 'g-sharp',
-        id: 'G#',
-        path: '../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track)23.wav',
-        noteNumber: 8
-    }, {
-        name: 'a',
-        id: 'A',
-        path: '../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track)27.wav',
-        noteNumber: 9
-    }, {
-        name: 'a-sharp',
-        id: 'A#',
-        path: '../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track)31.wav',
-        noteNumber: 10
-    }, {
-        name: 'b',
-        id: 'A#',
-        path: '../assets/wiz-khalifa/Taylor_Gang_(Bonus_Track)3.wav',
-        noteNumber: 11
-    }]
-};
+      
 const cMinor = {
     title : 'C-',
     sounds :  [{
@@ -532,5 +469,5 @@ const peeWee = {
     }]
 };
 
-const soundBoards = [tones, board1, synthBank, mikeBank, luda, wiz, cMinor, peeWee];
+const soundBoards = [tones, board1, synthBank, mikeBank, luda, cMinor, peeWee];
 export { soundBoards };
