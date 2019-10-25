@@ -121,38 +121,41 @@
             </div>
 
         <section class="user-settings">
+            <div id="controls">
+                <button id="record">REC</button>
+                <button id="save-record">SAVE</button>
+                <button id="play-record">PLAY</button>
+                <button id="stop-record">STOP</button>
+            </div>
             
-        <button id="record">Record</button>
-        <button id="save-record">Save Recording</button>
-        <button id="play-record">Play Recording</button>
-        <button id="stop-record">Stop Recording</button>
-            
-            <form>Keyboard Sounds 
-                <select name="soundbank" id="select-soundbank">
-                </select>
-                
+            <div id="settings">
+                <form>Keyboard Sounds 
+                    <select name="soundbank" id="select-soundbank">
+                    </select>
+                    
 
-                <label for="color-scheme">Color Scheme:</label>
-                <select id="color-scheme" name="color-scheme">
-                    <option value="monochrome">Monochrome</option>
-                    <option value="halloween">Halloween</option>
-                    <option value="neon">Neon</option>
-                    <option value="fall">Fall</option>
-                    <option value="jones">Tom Jones</option>
-                    <option value="twinpeaks">Twin Peaks</option>
-                </select>
-            </form>
+                    <label for="color-scheme">Color Scheme:</label>
+                    <select id="color-scheme" name="color-scheme">
+                        <option value="monochrome">Monochrome</option>
+                        <option value="halloween">Halloween</option>
+                        <option value="neon">Neon</option>
+                        <option value="fall">Fall</option>
+                        <option value="jones">Tom Jones</option>
+                        <option value="twinpeaks">Twin Peaks</option>
+                    </select>
+                </form>
 
-            <form id="metronome-sound">Metronome Sound
-            </form>
-            <form id="downbeat-sound">DownBeat Sound
-            </form>
-            Time Signature
-            <select id="time-sig" name="time-sig">
-                <option name="2/4" value="2">2/4</option>
-                <option name="3/4" value="3">3/4</option>
-                <option name="4/4" value="4">4/4</option>
-            </select>
+                <form id="metronome-sound">Metronome Sound
+                </form>
+                <form id="downbeat-sound">DownBeat Sound
+                </form>
+                Time Signature 
+                <select id="time-sig" name="time-sig">
+                    <option name="2/4" value="2">2/4</option>
+                    <option name="3/4" value="3">3/4</option>
+                    <option name="4/4" value="4">4/4</option>
+                </select>
+            </div>
             <button id="save-sound">Save Settings</button>
         </section>
     </article>
