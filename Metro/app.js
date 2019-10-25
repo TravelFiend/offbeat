@@ -11,15 +11,16 @@ import { loadUser } from '../Common/load-user.js';
 import { changeTheme } from '../Common/change-theme.js';
 import { whiteKeysColorChange, blackKeysColorChange } from './color-change.js';
 import { generateKeySoundListItem } from '../utils/generateKeySoundListItem.js';
+<<<<<<< HEAD
 import { hideUnusedMetro} from '../Metro/hideUnusedMetro.js';
 import { masterSoundList } from '../assets/master-list-of-sounds/masterSoundList.js';
+=======
+>>>>>>> 7291fc40381444cea89c567e85c846c6c6c0b18a
 
 let user = loadUser();
 let theme = user.theme;
 
 let currentRecording = [];
-
-// const playBackItem = newFunk(sbSelect).currentProject;
 
 const saveSound = document.getElementById('save-sound');
 const keyboardSoundSelect = document.getElementById('select-soundbank');
@@ -39,6 +40,7 @@ blackKeysColorChange(theme);
 mapSound(soundBoard, note);
 
 generateKeySoundListItem(soundBoards);
+
 
 keyboardSoundSelect.addEventListener('input', (event) => {
     soundBoards.forEach(soundObj => {
@@ -118,12 +120,12 @@ function saveRecording() {
     storeUser(user);
 }
 
-function findSb(sb, value) {
+function findSb(sb) {
+    let sbSelect = document.getElementById('select-soundbank');
     for (let i = 0; i < sb.length; i++) {
-        if (sb[i].title === value) return sb[i].sounds;
+        if (sb[i].title === sbSelect.value) return sb[i].sounds;
     }
 }
-let sbValue = findSb(soundBoards, sbSelect.value);
 
 function newFunk(sbSelect, array) {
     let soundPathArray = [];
@@ -138,11 +140,23 @@ function newFunk(sbSelect, array) {
     return soundPathArray;
 }
 
+<<<<<<< HEAD
 const pathArray = newFunk(sbValue, user.currentProject);
 
+=======
+>>>>>>> 7291fc40381444cea89c567e85c846c6c6c0b18a
 const playRecordingButton = document.getElementById('play-record');
+const stopPlaybackButton = document.getElementById('stop-record');
 playRecordingButton.addEventListener('click', () => {
     let BPMElement = document.getElementById('bpm');
     let BPM = parseInt(BPMElement.value);
-    playBack(BPM, pathArray);
+    let sbValue = findSb(soundBoards);
+    let pathArray = newFunk(sbValue, user.currentProject);
+    let runningPlayback = playBack(BPM, pathArray);
+    playRecordingButton.disabled = true;
+
+    stopPlaybackButton.addEventListener('click', () => {
+        playRecordingButton.disabled = false;
+        clearTimeout(runningPlayback);
+    });
 });
