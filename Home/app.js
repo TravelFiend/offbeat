@@ -1,13 +1,21 @@
-export const storeUser = (user) => {
-    const jsonUser = JSON.stringify(user);
-    localStorage.set('user', jsonUser);
-};
+import { storeUser } from '../Common/storeUser.js';
+import createUser from './createUser.js';
+import { colorObject } from '../Metro/data/color-api.js';
 
-export const getUser = () => {
-    const jsonUser = localStorage.getItem('user');
-    if (!jsonUser){
-        return null;
-    }
-    const user = JSON.parse(jsonUser);
-    return user;
-};
+const userData = document.getElementById('user-form');
+const themePicker = document.getElementById('color-scheme');
+const hotBod = document.querySelector('body');
+
+userData.addEventListener('submit', function(event){
+    event.preventDefault();
+    const formData = new FormData(userData);
+    const user = createUser(formData);
+    storeUser(user);
+    window.location = '../Metro';
+});
+
+themePicker.addEventListener('change', (event) => {
+    let theme = event.target.value;
+    hotBod.style.backgroundColor = colorObject[theme].background;
+    hotBod.style.color = colorObject[theme].main;
+});

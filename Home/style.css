@@ -1,5 +1,6 @@
 html{
     height: 100%;
+    margin: 0;
 }
 
 body{
@@ -7,12 +8,20 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: 'Big Shoulders Text';
+}
+
+h1{
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 100px;
+    margin: 0;
 }
 
 main{
     margin: 50px;
     width: 960px;
     height: 700px;
+    font-size: 50px;
 }
 
 #user-form{
@@ -23,13 +32,18 @@ main{
 
 input{
     margin-bottom: 10px;
+    height: 25px;
+    padding: 5px;
     width: 150px;
     border: 1px solid black;
     border-radius: 2px;
+    text-align: center;
+    font-size: 13px;
 }
 
 label{
-    font-size: 11px;
+    font-size: 15px;
+    margin: 2px;
 }
 
 button{
@@ -44,7 +58,7 @@ button{
 
 button:hover{
     background-color: white;
-    color: white;
+    color: black;
 }
 
 a{

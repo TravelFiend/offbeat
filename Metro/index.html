@@ -4,11 +4,160 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../Common/main.css">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Big+Shoulders+Text&display=swap" rel="stylesheet">
+    <title>OFFBEAT - Product</title>
 </head>
 <body>
-    
-    <script src="./app.js/"></script>
+    <div id="header">
+        <h1>OFFBEAT</h1>
+        <header>
+                <p>
+                    <span id="project-name"></span> by <span id="user-name"></span>
+                </p>
+                <a href="../About/index.html">about us</a>
+                <a href="../Seq">Your Patterns</a>
+        </header>
+    </div>
+
+    <article id="main">
+        <div id="metro-full">
+            <div id="metro">
+            <label id="bpm-text" for="BPM">BPM</label>
+            <input type="number" name="BPM" id="bpm" value="60">
+            
+            <ul id="start-stop">
+                <li><button id="start">&#10148;</button></li>
+                <li><button id="stop">&#10066;</button></li>
+            </ul>
+            </div>
+
+            <ul id="metronome-display">
+                <li class="metronome" id="met-1"></li>
+                <li class="metronome" id="met-2"></li>
+                <li class="metronome" id="met-3"></li>
+                <li class="metronome" id="met-4"></li>
+            </ul>
+            <div id="metro-hide"></div>
+        </div>
+
+
+        <section class="keyboard">
+
+            <ul class="notes">
+                <li class="black-keys" id="c-sharp">C#</li>
+                <li class="black-keys" id="d-sharp">D#</li>
+                <li class="black-keys" id="empty">empty</li>
+                <li class="black-keys" id="f-sharp">F#</li>
+                <li class="black-keys" id="g-sharp">G#</li>
+                <li class="black-keys" id="a-sharp">A#</li>
+            </ul>
+
+            <ul class="notes">
+                <li class="white-keys" id="c">C</li>
+                <li class="white-keys" id="d">D</li>
+                <li class="white-keys" id="e">E</li>
+                <li class="white-keys" id="f">F</li>
+                <li class="white-keys" id="g">G</li>
+                <li class="white-keys" id="a">A</li>
+                <li class="white-keys" id="b">B</li>
+            </ul>
+
+        </section>
+
+        <div id="soundbank-legend">
+                <h2>Soundbank Legend</h2>
+                <ul>
+                    <li class="legend">
+                        C:
+                        <span id="step-0">Empty</span>
+                    </li>
+                    <li class="legend">
+                        C#:
+                        <span id="step-1">Empty</span>
+                    </li>
+                    <li class="legend">
+                        D:
+                        <span id="step-2">Empty</span>
+                    </li>
+                    <li class="legend">
+                        D#:
+                        <span id="step-3">Empty</span>
+                    </li>
+                    <li class="legend">
+                        E:
+                        <span id="step-4">Empty</span>
+                    </li>
+                    <li class="legend">
+                        F:
+                        <span id="step-5">Empty</span>
+                    </li>
+                    <li class="legend">
+                        F#:
+                        <span id="step-6">Empty</span>
+                    </li>
+                    <li class="legend">
+                        G:
+                        <span id="step-7">Empty</span>
+                    </li>
+                    <li class="legend">
+                        G#:
+                        <span id="step-8">Empty</span>
+                    </li>
+                    <li class="legend">
+                        A:
+                        <span id="step-9">Empty</span>
+                    </li>
+                    <li class="legend">
+                        A#:
+                        <span id="step-10">Empty</span>
+                    </li>
+                    <li class="legend">
+                        B:
+                        <span id="step-11">Empty</span>
+                    </li>
+                </ul>
+            </div>
+
+        <section class="user-settings">
+            
+        <button id="record">Record</button>
+        <button id="save-record">Save Recording</button>
+        <button id="play-record">Play Recording</button>
+        <button id="stop-record">Stop Recording</button>
+            
+            <form>Keyboard Sounds 
+                <select name="soundbank" id="select-soundbank">
+                </select>
+                
+
+                <label for="color-scheme">Color Scheme:</label>
+                <select id="color-scheme" name="color-scheme">
+                    <option value="monochrome">Monochrome</option>
+                    <option value="halloween">Halloween</option>
+                    <option value="neon">Neon</option>
+                    <option value="fall">Fall</option>
+                    <option value="jones">Tom Jones</option>
+                    <option value="twinpeaks">Twin Peaks</option>
+                </select>
+            </form>
+
+            <form id="metronome-sound">Metronome Sound
+            </form>
+            <form id="downbeat-sound">DownBeat Sound
+            </form>
+            Time Signature
+            <select id="time-sig" name="time-sig">
+                <option name="2/4" value="2">2/4</option>
+                <option name="3/4" value="3">3/4</option>
+                <option name="4/4" value="4">4/4</option>
+            </select>
+            <button id="save-sound">Save Settings</button>
+        </section>
+    </article>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.2/paper-full.min.js"></script> -->
+
+    <script type="module" src="./app.js"></script>
 </body>
 </html>

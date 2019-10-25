@@ -1,12 +1,60 @@
-main {
-    display: flex
+html, body{
+    height: 100%;
+    margin: 0;
+    font-family: 'Big Shoulders Text';
 }
 
-div {
-    width: 150px;
+h1{
+    font-family: 'Baloo Bhai', cursive;
+    margin-top: 5px;
+    margin-left: 25px;
+    font-size: 50px;
+}
+
+span{
+    font-size: 10px;
+}
+
+main {
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team {
+    width: 206px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    border: solid 1px black;
+    height: 600px;
+    margin: 0 40px;
+}
+
+.bio{
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px;
     height: 400px;
-    margin: 5px
+    text-align: center;
+}
+
+img {
+    width: 200px;
+    margin: 15px;
+    border-radius: 100%;
+    border: 3px solid black;
+}
+
+footer{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    height: 75px;
+    text-decoration: none;
+    color: black;
 }
