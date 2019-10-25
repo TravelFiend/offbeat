@@ -4,6 +4,7 @@ import { saveSettings } from './storeUser.js';
 import { loadUser } from '../Common/load-user.js';
 
 const body = document.querySelector('body');
+const anchors = document.querySelectorAll('a');
 
 export function changeTheme() {
     let userNow = loadUser();
@@ -14,6 +15,8 @@ export function changeTheme() {
 
     body.style.backgroundColor = backColor;
     body.style.color = mainColor;
+    anchors.style.color = mainColor;
+
 
     whiteKeysColorChange(theme);
     blackKeysColorChange(theme);
