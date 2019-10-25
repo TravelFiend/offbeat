@@ -1,7 +1,5 @@
 import { changeMetColor } from '../Metro/color-change.js';
 
-let i = 0;
-
 export const clock = (bpm, soundPath, downBeatPath, beats) => {
     let count = 0;
     const clickSound = new Audio(soundPath);
@@ -29,6 +27,7 @@ export const bpmToMs = (bpm) => {
 };
 
 export const playBack = (bpm, arrayoOfPaths) => {
+    let i = 0;
     const runningPlay = setInterval(() => {
         let nextSound = new Audio(arrayoOfPaths[i]);
         nextSound.play();
