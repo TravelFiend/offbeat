@@ -1,4 +1,4 @@
-import { storeUser } from 'offbeat/Common/storeUser.js';
+import { storeUser } from '/offbeat/Common/storeUser.js';
 
 let patternTable = document.querySelector('tbody');
 
