@@ -28,5 +28,5 @@ export const colorObject = {
         main: 'white',
         secondary: 'black',
         background: '#c40501',
-    }
+    },
 };
