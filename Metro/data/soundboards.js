@@ -334,7 +334,7 @@ const luda = {
     }, {
         name: 'b',
         id: 'Milk tha Cow',
-        path: '../assets/ludacris/Yeah!_Usher_featuring_Lil_Jon and_Ludacris.3.wav',
+        path: '../assets/ludacris/Yeah!_Usher_featuring_Lil_Jon_and_Ludacris.3.wav',
         noteNumber: 11
     }]
 };
