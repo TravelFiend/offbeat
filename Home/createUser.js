@@ -1,8 +1,10 @@
 const createUser = (formData) => {
     const user = {
         name: formData.get('user'),
-        project: formData.get('project'), 
-        theme: formData.get('color-scheme')
+        theme: formData.get('color-scheme'),
+        projectName: formData.get('project'),
+        projects: [],
+        currentProject: []
     };
     return user;
 };

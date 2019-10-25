@@ -14,9 +14,12 @@
         <h1>OFFBEAT</h1>
         <header>
                 <p>
-                    <span id="project-name"></span> by <span id="user-name"></span>
+                    <span id="project-name"></span> by: <span id="user-name"></span>
                 </p>
-                <a href="../About/index.html">about us</a>
+                <nav>
+                    <a href="../About/index.html">About Us</a>
+                    <a href="../Seq">Your Patterns</a>
+                </nav>
         </header>
     </div>
 
@@ -40,6 +43,7 @@
             </ul>
             <div id="metro-hide"></div>
         </div>
+
 
         <section class="keyboard">
 
@@ -119,41 +123,45 @@
             </div>
 
         <section class="user-settings">
+            <div id="controls">
+                <button id="record">REC</button>
+                <button id="save-record">SAVE</button>
+                <button id="play-record">PLAY</button>
+                <button id="stop-record">STOP</button>
+            </div>
             
+            <div id="settings">
+                <form>Keyboard Sounds 
+                    <select name="soundbank" id="select-soundbank">
+                    </select>
+                    
 
-            <form>Keyboard Sounds 
-                <select name="soundbank" id="select-soundbank">
-                    <!-- <option value = "./data/soundboard.js">SoundBoard</option> -->
-                </select>
-                
-                <label for="color-scheme">Color Scheme:</label>
-                <select id="color-scheme" name="color-scheme">
-                    <option value="monochrome">Monochrome</option>
-                    <option value="halloween">Halloween</option>
-                    <option value="neon">Neon</option>
-                    <option value="fall">Fall</option>
-                    <option value="jones">Tom Jones</option>
-                    <option value="twinpeaks">Twin Peaks</option>
-                </select>
-            </form>
+                    <label for="color-scheme">Color Scheme:</label>
+                    <select id="color-scheme" name="color-scheme">
+                        <option value="monochrome">Monochrome</option>
+                        <option value="halloween">Halloween</option>
+                        <option value="neon">Neon</option>
+                        <option value="fall">Fall</option>
+                        <option value="jones">Tom Jones</option>
+                        <option value="twinpeaks">Twin Peaks</option>
+                    </select>
+                </form>
 
-            <form id="metronome-sound">Metronome Sound
-            </form>
-            <form id="downbeat-sound">DownBeat Sound
-            </form>
-            Time Signature
-            <select id="time-sig" name="time-sig">
-                <option name="2/4" value="2">2/4</option>
-                <option name="3/4" value="3">3/4</option>
-                <option name="4/4" value="4">4/4</option>
-            </select>
+                <form id="metronome-sound">Metronome Sound
+                </form>
+                <form id="downbeat-sound">DownBeat Sound
+                </form>
+                Time Signature 
+                <select id="time-sig" name="time-sig">
+                    <option name="2/4" value="2">2/4</option>
+                    <option name="3/4" value="3">3/4</option>
+                    <option name="4/4" value="4">4/4</option>
+                </select>
+            </div>
             <button id="save-sound">Save Settings</button>
         </section>
     </article>
 
-    <!-- <canvas id="myCanvas" resize></canvas>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.2/paper-full.min.js"></script>
-    <script type="text/paperscript" src="./paperTime.js" canvas="myCanvas"></script> -->
     <script type="module" src="./app.js"></script>
 </body>
 </html>

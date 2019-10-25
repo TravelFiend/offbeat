@@ -1,3 +1,33 @@
-input{
-    display: block;
+td {
+    /* border: 14px solid black; */
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    font-family: 'Big Shoulders Text';
+    font-size: 30px;
+}
+
+th {
+    font-size: 40px;
+    padding: 25px 20px;
+}
+
+td {
+    text-align: center;
+}
+
+button {
+    font-family: 'Big Shoulders Text';
+    font-size: 32px;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    border: solid 2px;
 }
