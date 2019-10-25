@@ -135,10 +135,18 @@ function newFunk(sbSelect, array) {
 }
 
 const playRecordingButton = document.getElementById('play-record');
+const stopPlaybackButton = document.getElementById('stop-record');
 playRecordingButton.addEventListener('click', () => {
     let BPMElement = document.getElementById('bpm');
     let BPM = parseInt(BPMElement.value);
     let sbValue = findSb(soundBoards);
     let pathArray = newFunk(sbValue, user.currentProject);
     playBack(BPM, pathArray);
+    let runningPlayback = playBack(BPM, pathArray);
+    playRecordingButton.disabled = true;
+
+    stopPlaybackButton.addEventListener('click', () => {
+        playRecordingButton.disabled = false;
+        clearTimeout(runningPlayback);
+    });
 });
