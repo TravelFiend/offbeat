@@ -1,3 +1,4 @@
+// seems like this could live in a file with other functions
 import { loadUser } from './load-user.js';
 import { colorObject } from '../Metro/data/color-api.js';
 

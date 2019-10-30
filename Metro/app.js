@@ -33,6 +33,7 @@ createHeader();
 loadTheme();
 whiteKeysColorChange(theme);
 blackKeysColorChange(theme);
+// seems like this mutates the note? a more descriptive name might be nice in that case
 mapSound(soundBoard, note);
 
 generateKeySoundListItem(soundBoards);
@@ -41,7 +42,7 @@ generateKeySoundListItem(soundBoards);
 keyboardSoundSelect.addEventListener('input', (event) => {
     soundBoards.forEach(soundObj => {
         // if (event.target.value !== event.target.value)
-        if (event.target.value === soundObj.title){
+        if (event.target.value === soundObj.title) {
             mapSound(soundObj.sounds, note);
         }
     });
@@ -67,7 +68,7 @@ start.addEventListener('click', () => {
     start.disabled = true;
     let BPMElement = document.getElementById('bpm');
     let BPM = parseInt(BPMElement.value);
-    
+
     let beats = Number(document.getElementById('time-sig').value);
 
     let metroSound = document.getElementById('metronome-sound-menu').value;
@@ -92,7 +93,7 @@ if (user.downBeatIndex) downSelect.selectedIndex = user.downBeatIndex;
 
 saveSound.addEventListener('click', () => {
     let userNow = loadUser();
-    
+
     saveSettings(userNow);
 });
 
@@ -133,7 +134,7 @@ function newFunk(sbSelect, array) {
             if (sound.name === array[i]) {
                 soundPathArray.push(sound.path);
             }
-            
+
         });
     }
     return soundPathArray;
@@ -151,6 +152,7 @@ playRecordingButton.addEventListener('click', () => {
 
     stopPlaybackButton.addEventListener('click', () => {
         playRecordingButton.disabled = false;
+        // i do worry about adding extra event listeners on click without removing them, but it seems to work fine. Do we remove them somewhere?
         clearTimeout(runningPlayback);
     });
 });

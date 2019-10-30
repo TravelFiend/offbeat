@@ -1,3 +1,4 @@
+// seems like this could live in a file with other functions
 import { loadUser } from '../Common/load-user.js';
 
 export const createHeader = () => {
