@@ -5,9 +5,11 @@ recordButton.addEventListener('click', recordEvent);
 let record = false;
 
 function recordEvent() {
-    if (record){
+    // seems like a toggle; if so, could be replaced with record = !record
+    if (record) {
         record = false;
     } else {
         record = true;
     }
+
 }

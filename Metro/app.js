@@ -66,6 +66,7 @@ beatMenu.addEventListener('change', () => {
 const start = document.getElementById('start');
 start.addEventListener('click', () => {
     start.disabled = true;
+    // these can be `const`s since you don't reassign them anywhere
     let BPMElement = document.getElementById('bpm');
     let BPM = parseInt(BPMElement.value);
 
@@ -102,6 +103,7 @@ function recordEventTakeTwo() {
     toggleRecColor(recordButton, true);
     recordButton.disabled = true;
     let keys = document.querySelectorAll('li');
+    // I'd like to see some readable `const`s to explain these numbers
     for (let i = 6; i < 19; i++) {
         keys[i].addEventListener('click', recordNote);
     }
@@ -131,6 +133,7 @@ function newFunk(sbSelect, array) {
     let soundPathArray = [];
     for (let i = 0; i < array.length; i++) {
         sbSelect.forEach(sound => {
+            // in the future, this will be a good candidate for another array method
             if (sound.name === array[i]) {
                 soundPathArray.push(sound.path);
             }

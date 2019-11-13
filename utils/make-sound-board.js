@@ -2,11 +2,12 @@ export class SoundBoard {
     constructor(soundBoard) {
         this.soundBoard = soundBoard.slice();
     }
-    adjustValue(newValue){
-        for (let i = 0; i < this.soundBoard.length; i++){
+    adjustValue(newValue) {
+        for (let i = 0; i < this.soundBoard.length; i++) {
             this.soundBoard[i].value = newValue;
-        }   
+        }
     }
+    // wooooooah. I love this file. I doesn't seem to be used anywhere?
     dominantSeventhChord() {
         let dominantSeventhArray = [this.soundBoard[0].value, this.soundBoard[4].value, this.soundBoard[7].value, this.soundBoard[10].value];
         dominantSeventhArray.forEach(item => {
