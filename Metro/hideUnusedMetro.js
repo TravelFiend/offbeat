@@ -3,7 +3,9 @@ export const hideUnusedMetro = beats => {
     for (let i = 0; i < beats; i++) {
         leds[i].classList.remove('hidden');
     }
+    // why four? I'd like to see a readable const for that number
     for (let i = beats; i < 4; i++) {
         leds[i].classList.add('hidden');
-        
-    }};
+
+    }
+};

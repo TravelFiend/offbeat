@@ -33,6 +33,7 @@ createHeader();
 loadTheme();
 whiteKeysColorChange(theme);
 blackKeysColorChange(theme);
+// seems like this mutates the note? a more descriptive name might be nice in that case
 mapSound(soundBoard, note);
 
 generateKeySoundListItem(soundBoards);
@@ -41,7 +42,7 @@ generateKeySoundListItem(soundBoards);
 keyboardSoundSelect.addEventListener('input', (event) => {
     soundBoards.forEach(soundObj => {
         // if (event.target.value !== event.target.value)
-        if (event.target.value === soundObj.title){
+        if (event.target.value === soundObj.title) {
             mapSound(soundObj.sounds, note);
         }
     });
@@ -65,9 +66,10 @@ beatMenu.addEventListener('change', () => {
 const start = document.getElementById('start');
 start.addEventListener('click', () => {
     start.disabled = true;
+    // these can be `const`s since you don't reassign them anywhere
     let BPMElement = document.getElementById('bpm');
     let BPM = parseInt(BPMElement.value);
-    
+
     let beats = Number(document.getElementById('time-sig').value);
 
     let metroSound = document.getElementById('metronome-sound-menu').value;
@@ -92,7 +94,7 @@ if (user.downBeatIndex) downSelect.selectedIndex = user.downBeatIndex;
 
 saveSound.addEventListener('click', () => {
     let userNow = loadUser();
-    
+
     saveSettings(userNow);
 });
 
@@ -101,6 +103,7 @@ function recordEventTakeTwo() {
     toggleRecColor(recordButton, true);
     recordButton.disabled = true;
     let keys = document.querySelectorAll('li');
+    // I'd like to see some readable `const`s to explain these numbers
     for (let i = 6; i < 19; i++) {
         keys[i].addEventListener('click', recordNote);
     }
@@ -130,10 +133,11 @@ function newFunk(sbSelect, array) {
     let soundPathArray = [];
     for (let i = 0; i < array.length; i++) {
         sbSelect.forEach(sound => {
+            // in the future, this will be a good candidate for another array method
             if (sound.name === array[i]) {
                 soundPathArray.push(sound.path);
             }
-            
+
         });
     }
     return soundPathArray;
@@ -151,6 +155,7 @@ playRecordingButton.addEventListener('click', () => {
 
     stopPlaybackButton.addEventListener('click', () => {
         playRecordingButton.disabled = false;
+        // i do worry about adding extra event listeners on click without removing them, but it seems to work fine. Do we remove them somewhere?
         clearTimeout(runningPlayback);
     });
 });

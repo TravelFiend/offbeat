@@ -10,6 +10,7 @@ let currentBeat = document.getElementById('met-4');
 const metCircles = document.getElementsByClassName('metronome');
 
 export function changeMetColor(beats) {
+    // nice!
     theme = loadUser().theme;
     mainColor = colorObject[theme].main;
     secondaryColor = colorObject[theme].secondary;
@@ -18,6 +19,7 @@ export function changeMetColor(beats) {
     metPosition++;
     currentBeat = document.getElementById('met-' + metPosition);
     currentBeat.style.backgroundColor = mainColor;
+    // `0px 0px 30px ${secondaryColor}`
     currentBeat.style.boxShadow = '0px 0px 30px ' + secondaryColor;
 
     if (metPosition === beats) {
@@ -38,6 +40,7 @@ export function whiteKeysColorChange(theme) {
     let mainColor = colorObject[theme].main;
     let secondaryColor = colorObject[theme].secondary;
     const whiteKeys = document.querySelectorAll('li');
+    // would like to see some readable names for these numbers
     for (let i = 12; i < 19; i++) {
         whiteKeys[i].style.backgroundColor = mainColor;
         whiteKeys[i].style.color = secondaryColor;
@@ -54,6 +57,9 @@ export function blackKeysColorChange(theme) {
 }
 
 export function toggleRecColor(button, boolean) {
+    /**
+     * button.style.color = boolean ? 'red' : 'white'
+    */
     if (boolean) {
         button.style.color = 'red';
     } else {
